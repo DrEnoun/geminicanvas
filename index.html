@@ -258,21 +258,6 @@
   </div>
 </section>
 
-<section class="slide" data-title="CREATE — build your own discipline prototype">
-  <div class="content grid2">
-    <div>
-      <div class="phase">CREATE</div><div class="phase-sub">Implement in your own discipline</div>
-      <p class="lead" style="margin-top:18px">Now make it yours. Start from one real teaching difficulty, not from a desire to “use AI”.</p>
-    </div>
-    <div class="card">
-      <h3>35-minute individual build</h3>
-      <div class="flow"><span class="step">1 · Problem</span><span class="arrow">→</span><span class="step">2 · Outcome</span><span class="arrow">→</span><span class="step">3 · Interaction</span><span class="arrow">→</span><span class="step">4 · Feedback</span></div>
-      <p style="margin-top:22px"><strong>Choose a format:</strong> interactive learning tool, mini learning page, or teaching innovation prototype.</p>
-      <div style="margin-top:14px"><span class="pill">quiz</span><span class="pill">concept explorer</span><span class="pill">guided calculator</span><span class="pill">decision tree</span><span class="pill">simulation</span><span class="pill">micro-course</span></div>
-    </div>
-  </div>
-</section>
-
 <section class="slide" data-title="CREATE — prompt generator wizard">
   <div class="content">
     <div class="eyebrow">CREATE · Your own teaching material</div>
@@ -339,6 +324,10 @@
           <summary>Optional refinements</summary>
           <div class="wizard-options-grid">
             <label class="wizard-field">
+              <span>Current teaching challenge</span>
+              <input id="wizChallenge" type="text" placeholder="e.g. students memorise steps but cannot apply them">
+            </label>
+            <label class="wizard-field">
               <span>Time available</span>
               <input id="wizTime" type="text" placeholder="e.g. 15 minutes / one class">
             </label>
@@ -379,6 +368,10 @@
               </select>
             </label>
             <label class="wizard-field">
+              <span>Approximate size</span>
+              <input id="wizSize" type="text" placeholder="e.g. 5 questions / 6 screens / 10 slides">
+            </label>
+            <label class="wizard-field">
               <span>Source to prioritise</span>
               <input id="wizSource" type="text" placeholder="e.g. Week 4 lecture notes / practical manual">
             </label>
@@ -411,6 +404,21 @@
         </div>
         <div class="pack-status" id="wizardStatus" aria-live="polite"></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-title="CREATE — build your own discipline prototype">
+  <div class="content grid2">
+    <div>
+      <div class="phase">CREATE</div><div class="phase-sub">Implement in your own discipline</div>
+      <p class="lead" style="margin-top:18px">Now make it yours. Start from one real teaching difficulty, not from a desire to “use AI”.</p>
+    </div>
+    <div class="card">
+      <h3>35-minute individual build</h3>
+      <div class="flow"><span class="step">1 · Problem</span><span class="arrow">→</span><span class="step">2 · Outcome</span><span class="arrow">→</span><span class="step">3 · Interaction</span><span class="arrow">→</span><span class="step">4 · Feedback</span></div>
+      <p style="margin-top:22px"><strong>Choose a format:</strong> interactive learning tool, mini learning page, or teaching innovation prototype.</p>
+      <div style="margin-top:14px"><span class="pill">quiz</span><span class="pill">concept explorer</span><span class="pill">guided calculator</span><span class="pill">decision tree</span><span class="pill">simulation</span><span class="pill">micro-course</span></div>
     </div>
   </div>
 </section>
