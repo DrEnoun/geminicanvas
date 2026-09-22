@@ -42,6 +42,24 @@
   // Interactive molecular viewer is initialized from js/molecule-viewer.js
   window.MoleculeViewer?.init();
 
+  // Copyable calculation-tutor build prompts
+  document.querySelectorAll('.copy-build-prompt').forEach(button=>{
+    button.addEventListener('click',async()=>{
+      const target=document.getElementById(button.dataset.copyTarget);
+      const status=button.closest('.card')?.querySelector('.copy-build-status');
+      if(!target)return;
+      try{
+        await navigator.clipboard.writeText(target.innerText.trim());
+        const original=button.textContent;
+        button.textContent='Copied';
+        if(status)status.textContent='Copied — paste this into the same Gemini Canvas.';
+        setTimeout(()=>button.textContent=original,1400);
+      }catch{
+        if(status)status.textContent='Copy was blocked. Select the prompt text and copy it manually.';
+      }
+    });
+  });
+
   // Stoichiometry tutor
   const tutor=document.getElementById('stoichTutor'); const steps=[...tutor.querySelectorAll('.tutor-step')]; const dots=[...tutor.querySelectorAll('.progress-dots i')]; let ts=0;
   function tutorShow(n){ts=n;steps.forEach((s,i)=>s.classList.toggle('on',i===n));dots.forEach((d,i)=>d.classList.toggle('on',i<=n));}
