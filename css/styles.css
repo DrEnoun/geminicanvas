@@ -107,7 +107,7 @@ p{font-size:clamp(17px,1.55vw,23px);line-height:1.5;margin:0;color:var(--muted)}
 .feedback.good{background:#eef9f4;color:#287a55}.feedback.bad{background:#fff0f4;color:#a84360}
 .progress-dots{display:flex;gap:8px;margin-bottom:18px}.progress-dots i{width:28px;height:6px;border-radius:99px;background:#e1e4ec}.progress-dots i.on{background:var(--purple)}
 /* transfer */
-.disciplines{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:28px}
+.disciplines{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
 .discipline{background:white;border:1px solid var(--line);border-radius:20px;padding:18px;text-align:center;transition:.3s}
 .discipline:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(39,48,79,.1)}
 .discipline .ico{font-size:32px;margin-bottom:10px}.discipline strong{display:block;font-size:15px}.discipline small{display:block;color:var(--muted);margin-top:6px;line-height:1.35}
