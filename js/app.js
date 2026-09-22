@@ -62,6 +62,121 @@
   document.getElementById('openVseprPackFromToolkit')?.addEventListener('click',openVseprPack);
   document.getElementById('closeVseprPack')?.addEventListener('click',closeVseprPack);
 
+  // Participant prompt generator wizard
+  const promptWizard=document.getElementById('promptWizard');
+  const wizType=document.getElementById('wizType');
+  const wizLevel=document.getElementById('wizLevel');
+  const wizInteraction=document.getElementById('wizInteraction');
+  const wizardPrompt=document.getElementById('wizardPrompt');
+  const wizardError=document.getElementById('wizardError');
+  const wizardStatus=document.getElementById('wizardStatus');
+  const copyWizardPrompt=document.getElementById('copyWizardPrompt');
+
+  function toggleOther(select,wrapId){
+    const wrap=document.getElementById(wrapId);
+    if(wrap)wrap.hidden=select.value!=='Other';
+  }
+  wizType?.addEventListener('change',()=>toggleOther(wizType,'wizTypeOtherWrap'));
+  wizLevel?.addEventListener('change',()=>toggleOther(wizLevel,'wizLevelOtherWrap'));
+  wizInteraction?.addEventListener('change',()=>toggleOther(wizInteraction,'wizInteractionOtherWrap'));
+
+  function fieldValue(id){return document.getElementById(id)?.value.trim()||''}
+  function resolvedValue(selectId,otherId){
+    const value=fieldValue(selectId);
+    return value==='Other'?fieldValue(otherId):value;
+  }
+
+  function makeNotebookPrompt(){
+    const type=resolvedValue('wizType','wizTypeOther');
+    const topic=fieldValue('wizTopic');
+    const level=resolvedValue('wizLevel','wizLevelOther');
+    const outcome=fieldValue('wizOutcome');
+    const time=fieldValue('wizTime');
+    const interaction=resolvedValue('wizInteraction','wizInteractionOther');
+    const feedback=fieldValue('wizFeedback');
+    const language=fieldValue('wizLanguage');
+    const source=fieldValue('wizSource');
+    const extra=fieldValue('wizExtra');
+
+    if(!type||!topic||!level||!outcome){
+      wizardError.textContent='Please complete: what you want to create, topic, learner group and learning outcome.';
+      return '';
+    }
+    wizardError.textContent='';
+
+    const lines=[
+      'Act as an instructional design partner. Work from the sources in this NotebookLM notebook.',
+      '',
+      'I want to create the following teaching material:',
+      '- Output: '+type,
+      '- Topic: '+topic,
+      '- Learners: '+level,
+      '- Learning outcome: '+outcome
+    ];
+    if(time)lines.push('- Time available: '+time);
+    if(interaction)lines.push('- Preferred learner interaction: '+interaction);
+    if(feedback)lines.push('- Feedback style: '+feedback);
+    if(language)lines.push('- Output language: '+language);
+    if(source)lines.push('- Prioritise this source if available: '+source);
+    if(extra)lines.push('- Additional requirements: '+extra);
+
+    lines.push(
+      '',
+      'GROUNDING RULES',
+      '1. Use the sources in this notebook as the factual and teaching-content basis.',
+      '2. Do not silently invent subject facts that are not supported by the sources.',
+      '3. If an essential fact, example or instruction is missing or unclear, flag it under "Source gaps / lecturer decisions needed".',
+      '4. Preserve important terminology used in my teaching sources unless simplification is needed for the learner level.',
+      '',
+      'YOUR TASK',
+      'A. Briefly identify the most relevant source content for this learning outcome.',
+      'B. Propose a simple learning flow appropriate for the requested output and learner group.',
+      'C. Decide what the learner should actively DO, not only read or watch.',
+      'D. Include appropriate checking or feedback based on the requested feedback style.',
+      'E. Keep the scope realistic for the stated time.',
+      'F. Then write ONE self-contained, copy-ready prompt that I can paste into Gemini Canvas to build the teaching material.',
+      '',
+      'FORMAT YOUR RESPONSE EXACTLY AS:',
+      '1. Grounded content summary',
+      '2. Suggested learning flow',
+      '3. Source gaps / lecturer decisions needed',
+      '4. CANVAS-READY PROMPT',
+      '',
+      'For the CANVAS-READY PROMPT, include the topic, learner level, learning outcome, required content, learning sequence, learner interactions, feedback behaviour, language, accessibility/mobile considerations where relevant, and any constraints above. Tell Canvas to preview a working prototype first and allow iterative refinement. Do not add unsupported subject content merely to make the prototype look complete.'
+    );
+    return lines.join('\n');
+  }
+
+  promptWizard?.addEventListener('submit',e=>{
+    e.preventDefault();
+    const prompt=makeNotebookPrompt();
+    if(!prompt)return;
+    wizardPrompt.textContent=prompt;
+    copyWizardPrompt.disabled=false;
+    wizardStatus.textContent='Prompt generated. Copy it and paste it into NotebookLM.';
+    wizardPrompt.focus();
+  });
+
+  copyWizardPrompt?.addEventListener('click',async()=>{
+    const text=wizardPrompt.textContent;
+    if(!text||copyWizardPrompt.disabled)return;
+    try{
+      await navigator.clipboard.writeText(text);
+      wizardStatus.textContent='Copied — now paste this prompt into NotebookLM.';
+    }catch{
+      wizardStatus.textContent='Copy was blocked by the browser. Select the generated prompt and copy it manually.';
+    }
+  });
+
+  document.getElementById('resetWizard')?.addEventListener('click',()=>{
+    promptWizard.reset();
+    ['wizTypeOtherWrap','wizLevelOtherWrap','wizInteractionOtherWrap'].forEach(id=>{const el=document.getElementById(id);if(el)el.hidden=true});
+    wizardPrompt.innerHTML='Complete the four essential inputs, then select <strong>Generate NotebookLM prompt</strong>.';
+    wizardError.textContent='';
+    wizardStatus.textContent='';
+    copyWizardPrompt.disabled=true;
+  });
+
   // Appendix
   const appendix=document.getElementById('appendix');
   function openAppendix(){closeVseprPack();appendix.classList.add('open');appendix.setAttribute('aria-hidden','false')}
