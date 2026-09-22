@@ -273,6 +273,148 @@
   </div>
 </section>
 
+<section class="slide" data-title="CREATE — prompt generator wizard">
+  <div class="content">
+    <div class="eyebrow">CREATE · Your own teaching material</div>
+    <h2>Prompt Generator Wizard</h2>
+    <p class="lead">Tell us what you want to teach. The wizard prepares a source-grounded prompt to paste into <strong>NotebookLM</strong>, which will turn your own sources into a Canvas-ready build brief.</p>
+
+    <div class="wizard-layout" style="margin-top:22px">
+      <form class="card wizard-form" id="promptWizard">
+        <div class="wizard-section-title">Essential inputs</div>
+
+        <label class="wizard-field">
+          <span>1 · What do you want to create? <b>*</b></span>
+          <select id="wizType" required>
+            <option value="">Choose…</option>
+            <option>Quiz</option>
+            <option>Interactive slides</option>
+            <option>Interactive visualization</option>
+            <option>Concept explorer</option>
+            <option>Guided problem-solving tutor</option>
+            <option>Simulation</option>
+            <option>Decision tree / scenario activity</option>
+            <option>Microlearning webpage</option>
+            <option>Flashcards / study aid</option>
+            <option>Infographic</option>
+            <option>Slide deck</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+        <label class="wizard-field wizard-other" id="wizTypeOtherWrap" hidden>
+          <span>Specify what you want to create</span>
+          <input id="wizTypeOther" type="text" placeholder="e.g. virtual lab walkthrough">
+        </label>
+
+        <label class="wizard-field">
+          <span>2 · Topic / teaching focus <b>*</b></span>
+          <input id="wizTopic" type="text" required placeholder="e.g. Acid–base titration">
+        </label>
+
+        <label class="wizard-field">
+          <span>3 · Who are the learners? <b>*</b></span>
+          <select id="wizLevel" required>
+            <option value="">Choose…</option>
+            <option>Secondary school students</option>
+            <option>Foundation / pre-university students</option>
+            <option>Diploma students</option>
+            <option>Undergraduate students</option>
+            <option>Postgraduate students</option>
+            <option>Professional / CPD learners</option>
+            <option>Community / public learners</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+        <label class="wizard-field wizard-other" id="wizLevelOtherWrap" hidden>
+          <span>Specify learner group</span>
+          <input id="wizLevelOther" type="text" placeholder="e.g. Year 2 nursing students">
+        </label>
+
+        <label class="wizard-field">
+          <span>4 · What should they be able to do? <b>*</b></span>
+          <textarea id="wizOutcome" required rows="3" placeholder="e.g. Calculate concentration from titration data and explain each step"></textarea>
+        </label>
+
+        <details class="wizard-options">
+          <summary>Optional refinements</summary>
+          <div class="wizard-options-grid">
+            <label class="wizard-field">
+              <span>Time available</span>
+              <input id="wizTime" type="text" placeholder="e.g. 15 minutes / one class">
+            </label>
+            <label class="wizard-field">
+              <span>Preferred interaction</span>
+              <select id="wizInteraction">
+                <option value="">Let NotebookLM recommend</option>
+                <option>Predict → check → feedback</option>
+                <option>Step-by-step guided practice</option>
+                <option>Explore / manipulate / compare</option>
+                <option>Case or scenario decisions</option>
+                <option>Calculation / problem solving</option>
+                <option>Discussion / reflection</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+            <label class="wizard-field wizard-other" id="wizInteractionOtherWrap" hidden>
+              <span>Specify interaction</span>
+              <input id="wizInteractionOther" type="text" placeholder="e.g. drag-and-drop classification">
+            </label>
+            <label class="wizard-field">
+              <span>Feedback style</span>
+              <select id="wizFeedback">
+                <option>Immediate formative feedback</option>
+                <option>Hints before revealing the answer</option>
+                <option>Feedback after each section</option>
+                <option>End-of-activity summary only</option>
+                <option>No automated feedback</option>
+              </select>
+            </label>
+            <label class="wizard-field">
+              <span>Output language</span>
+              <select id="wizLanguage">
+                <option>English</option>
+                <option>Bahasa Melayu</option>
+                <option>Bilingual English + Bahasa Melayu</option>
+                <option>Follow the language of my sources</option>
+              </select>
+            </label>
+            <label class="wizard-field">
+              <span>Source to prioritise</span>
+              <input id="wizSource" type="text" placeholder="e.g. Week 4 lecture notes / practical manual">
+            </label>
+          </div>
+          <label class="wizard-field" style="margin-top:12px">
+            <span>Anything else?</span>
+            <textarea id="wizExtra" rows="2" placeholder="e.g. mobile-friendly, low-stakes, include 5 questions, avoid jargon"></textarea>
+          </label>
+        </details>
+
+        <div class="resource-actions">
+          <button type="submit" class="primary">Generate NotebookLM prompt</button>
+          <button type="button" class="secondary" id="resetWizard">Reset</button>
+        </div>
+        <div class="wizard-error" id="wizardError" aria-live="polite"></div>
+      </form>
+
+      <div class="card wizard-output">
+        <div class="wizard-output-head">
+          <div>
+            <div class="kicker">READY TO HAND OVER</div>
+            <h3>Prompt for NotebookLM</h3>
+          </div>
+          <button type="button" class="secondary" id="copyWizardPrompt" disabled>Copy prompt</button>
+        </div>
+        <div class="wizard-prompt" id="wizardPrompt" tabindex="0">Complete the four essential inputs, then select <strong>Generate NotebookLM prompt</strong>.</div>
+        <div class="wizard-next">
+          <strong>Then:</strong>
+          <span>Paste into NotebookLM → let it ground the design in your uploaded sources → use the Canvas-ready prompt it produces when you move to Gemini Canvas.</span>
+        </div>
+        <div class="pack-status" id="wizardStatus" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="slide" data-title="Peer test — swap, test, refine">
   <div class="content">
     <div class="eyebrow">CREATE · Peer validation</div>
@@ -397,6 +539,8 @@
 • Check all chemistry explanations for internal consistency.</div>
   <h3>Stoichiometry transformation prompt</h3>
   <div class="mini-prompt">Keep the same microlearning philosophy, but redesign the experience as a guided mass-to-mass stoichiometry tutor using 2Mg + O2 → 2MgO. Scaffold the learner through balanced equation → given quantity → moles → mole ratio → mass → units → final answer. Give feedback at each step. Do not behave as a one-click calculator.</div>
+  <h3>Prompt Generator Wizard</h3>
+  <p>Near the end of CREATE, participants can enter their own topic, learner group, learning outcome and desired teaching artifact. The wizard generates a ready-to-copy prompt for NotebookLM, which asks NotebookLM to ground the design in the participant's uploaded sources and return a Canvas-ready build prompt.</p>
   <h3>Peer review checklist</h3>
   <p>Accurate · Clear · Interactive · Student-friendly · Reusable</p>
   <h3>Responsible AI</h3>
