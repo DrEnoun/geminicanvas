@@ -44,6 +44,18 @@ Near the end, deliberately switch:
 
 **LEARNER MODE → TRAINER MODE**
 
+## Numbered workshop journey and navigation
+
+The participant-facing journey is locked as **eight numbered steps**:
+
+**01 SPARK → 02 GROUND → 03 BUILD → 04 REFINE → 05 TRANSFORM → 06 CREATE → 07 DELIVER → 08 SHARE**
+
+Every step must begin with a dedicated transition slide using the same large phase-title typography, step number, short purpose statement, and cue for what comes next.
+
+Regular content slides must use the same heading hierarchy: a small uppercase eyebrow containing **STEP NN · PHASE · context**, followed by the normal `h2` content title. Do not use oversized phase typography inconsistently inside ordinary content slides; the oversized outlined phase word is reserved for transition slides.
+
+The persistent bottom navigation must display the participant's current numbered step and include a **Steps** toggle. The toggle opens a quick-jump menu listing all eight phases and allows participants/trainers to revisit a phase directly. Keyboard shortcut: **S** for Steps; **A** remains Trainer Toolkit.
+
 ## Three-hour architecture
 
 ### Wave 1 — Learn Together — 90 min
