@@ -138,6 +138,8 @@ Peer review should identify at least one factual/pedagogical issue and one usabi
 
 ## GROUND phase
 
+A shared participant-ready VSEPR source pack is embedded in the web deck and also stored at `assets/vsepr-participant-input-pack.md`. Participants should be able to open it directly from the GROUND slide and Trainer Toolkit, copy the full pack, or download the Markdown source for the hands-on build.
+
 NotebookLM is a supporting segment only, around 10–15 minutes.
 
 > **Before Canvas builds, give it reliable content.**
