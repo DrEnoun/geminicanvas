@@ -72,6 +72,38 @@
   }));
   document.getElementById('restartTutor').addEventListener('click',()=>{['s1','s2','s3','s4'].forEach(id=>document.getElementById(id).value='');steps.forEach(s=>{const f=s.querySelector('.feedback');if(f&&s.dataset.step!=='4'){f.className='feedback';f.textContent=''}});tutorShow(0)});
 
+  // Student delivery helper
+  const deliveryMessage=document.getElementById('deliveryMessage');
+  const copyDeliveryMessage=document.getElementById('copyDeliveryMessage');
+  const deliveryStatus=document.getElementById('deliveryStatus');
+  document.getElementById('makeDeliveryMessage')?.addEventListener('click',()=>{
+    const title=document.getElementById('deliveryTitle')?.value.trim()||'Interactive learning activity';
+    const link=document.getElementById('deliveryLink')?.value.trim()||'';
+    if(!link){
+      deliveryMessage.textContent='Please paste your Canvas share link first.';
+      copyDeliveryMessage.disabled=true;
+      return;
+    }
+    const msg=`Learning activity: ${title}
+
+Open the interactive activity using this link:
+${link}
+
+Please open it in your web browser and complete the activity as instructed. If the link does not open from an in-app browser, copy it into your regular browser.`;
+    deliveryMessage.textContent=msg;
+    copyDeliveryMessage.disabled=false;
+    deliveryStatus.textContent='Student message ready.';
+  });
+  copyDeliveryMessage?.addEventListener('click',async()=>{
+    if(copyDeliveryMessage.disabled)return;
+    try{
+      await navigator.clipboard.writeText(deliveryMessage.textContent);
+      deliveryStatus.textContent='Copied — paste it into your LMS, Classroom, email or class group.';
+    }catch{
+      deliveryStatus.textContent='Copy was blocked. Select the message and copy it manually.';
+    }
+  });
+
   // Participant VSEPR source pack
   const vseprPack=document.getElementById('vseprPack');
   function openVseprPack(){closeAppendix();vseprPack.classList.add('open');vseprPack.setAttribute('aria-hidden','false')}
