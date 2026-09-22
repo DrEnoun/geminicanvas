@@ -222,6 +222,85 @@
   </div>
 </section>
 
+<section class="slide" data-title="TRANSFORM — build the calculation tutor">
+  <div class="content">
+    <div class="eyebrow">TRANSFORM · HANDS-ON · BUILD WITH ME</div>
+    <h2>Calculation Tutor · Version 1</h2>
+    <p class="lead">Keep your VSEPR prototype for comparison. Open a <strong>new Gemini Canvas</strong> and build the calculation scaffold first — not the polished app.</p>
+
+    <div class="grid2" style="margin-top:22px">
+      <div class="card">
+        <div class="handoff-steps">
+          <div class="handoff-step"><b>1</b><span><strong>Open a new Canvas</strong><small>Do not overwrite your VSEPR prototype.</small></span></div>
+          <div class="handoff-step"><b>2</b><span><strong>Paste the starter prompt</strong><small>Use the trainer-provided Mg → MgO problem below.</small></span></div>
+          <div class="handoff-step"><b>3</b><span><strong>Preview before improving</strong><small>Can the learner move through the reasoning one step at a time?</small></span></div>
+          <div class="handoff-step"><b>4</b><span><strong>Test one wrong answer</strong><small>Check whether the tutor gives useful feedback instead of simply revealing the final answer.</small></span></div>
+        </div>
+        <div class="card cyan" style="margin-top:14px;padding:15px"><p style="font-size:14px"><strong>Why no second NotebookLM setup here?</strong> This is a short transfer exercise using one fixed trainer-provided problem. For your own teaching material, you will return to NotebookLM using the Prompt Generator Wizard.</p></div>
+      </div>
+
+      <div class="card">
+        <div class="wizard-output-head">
+          <div><div class="kicker">STARTER PROMPT</div><h3>Build the reasoning scaffold</h3></div>
+          <button type="button" class="secondary copy-build-prompt" data-copy-target="stoichBasePrompt">Copy prompt</button>
+        </div>
+        <div class="mini-prompt build-copy-text" id="stoichBasePrompt">Create a first-year chemistry guided mass-to-mass stoichiometry tutor.
+
+Use this fixed problem:
+2Mg + O₂ → 2MgO
+If 6.0 g Mg reacts completely with excess O₂, calculate the mass of MgO formed.
+Use M(Mg) = 24.3 g mol⁻¹ and M(MgO) = 40.3 g mol⁻¹.
+
+Do NOT make a one-click calculator.
+
+Guide the learner through these stages one at a time:
+1. Identify the given quantity.
+2. Convert mass of Mg to moles.
+3. Use the Mg : MgO mole ratio.
+4. Convert moles of MgO to mass.
+5. Check the final unit and whether the answer is sensible.
+
+Require a learner response before moving to the next stage. Give brief formative feedback after each response. Do not reveal the final answer at the beginning.</div>
+        <div class="pack-status copy-build-status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-title="TRANSFORM — refine the calculation tutor">
+  <div class="content">
+    <div class="eyebrow">TRANSFORM · HANDS-ON · REFINE WITH ME</div>
+    <h2>Now improve it <span class="accent">one prompt at a time.</span></h2>
+    <p class="lead">Do not replace the whole build. Send these as follow-up instructions to the same Canvas.</p>
+
+    <div class="calc-refine-grid">
+      <div class="card calc-refine-card">
+        <span class="num">FOLLOW-UP 01</span>
+        <h3>Scaffold, don't reveal</h3>
+        <div class="mini-prompt build-copy-text" id="stoichRefine1">Improve the tutor so that each stage is locked until the learner attempts it. If an answer is wrong, give a short hint that points to the next reasoning move without immediately giving the correct number. Let the learner try again.</div>
+        <button type="button" class="secondary copy-build-prompt" data-copy-target="stoichRefine1">Copy</button>
+      </div>
+      <div class="card calc-refine-card">
+        <span class="num">FOLLOW-UP 02</span>
+        <h3>Make thinking visible</h3>
+        <div class="mini-prompt build-copy-text" id="stoichRefine2">Show the learner's reasoning path visually as: GIVEN → MOLES Mg → MOLE RATIO → MOLES MgO → MASS MgO → CHECK. Highlight the current stage and keep completed stages visible so the learner can see how the calculation is connected.</div>
+        <button type="button" class="secondary copy-build-prompt" data-copy-target="stoichRefine2">Copy</button>
+      </div>
+      <div class="card calc-refine-card">
+        <span class="num">FOLLOW-UP 03</span>
+        <h3>Make it classroom-ready</h3>
+        <div class="mini-prompt build-copy-text" id="stoichRefine3">Make the tutor mobile-friendly and student-friendly. Add a restart button, clear units beside numerical inputs, accessible labels, and a final explanation that reconstructs the full calculation only after the learner completes all stages. Keep the final answer approximately 9.95 g MgO using the supplied molar masses.</div>
+        <button type="button" class="secondary copy-build-prompt" data-copy-target="stoichRefine3">Copy</button>
+      </div>
+    </div>
+
+    <div class="card soft" style="margin-top:18px">
+      <p><strong>Test after every follow-up:</strong> correct input · wrong input · units · retry behaviour · final answer. Then compare your build with the working tutor on the next slide.</p>
+      <div class="flow" style="margin-top:12px"><span class="step">PROMPT</span><span class="arrow">→</span><span class="step">PREVIEW</span><span class="arrow">→</span><span class="step">TEST</span><span class="arrow">→</span><span class="step">REFINE</span></div>
+    </div>
+  </div>
+</section>
+
 <section class="slide" data-title="Stoichiometry tutor — scaffold the thinking">
   <div class="content stoich-layout">
     <div>
