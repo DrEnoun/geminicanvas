@@ -56,23 +56,11 @@
 
   // Participant VSEPR source pack
   const vseprPack=document.getElementById('vseprPack');
-  const packStatus=document.getElementById('packStatus');
   function openVseprPack(){closeAppendix();vseprPack.classList.add('open');vseprPack.setAttribute('aria-hidden','false')}
   function closeVseprPack(){vseprPack.classList.remove('open');vseprPack.setAttribute('aria-hidden','true')}
   document.getElementById('openVseprPack')?.addEventListener('click',openVseprPack);
   document.getElementById('openVseprPackFromToolkit')?.addEventListener('click',openVseprPack);
   document.getElementById('closeVseprPack')?.addEventListener('click',closeVseprPack);
-  document.getElementById('copyVseprPack')?.addEventListener('click',async()=>{
-    try{
-      const response=await fetch('assets/vsepr-participant-input-pack.md',{cache:'no-store'});
-      if(!response.ok)throw new Error('Pack unavailable');
-      const text=await response.text();
-      await navigator.clipboard.writeText(text);
-      packStatus.textContent='Copied — paste the full source pack into your grounding workflow.';
-    }catch{
-      packStatus.textContent='Copy was blocked by the browser. Use Download .md instead.';
-    }
-  });
 
   // Appendix
   const appendix=document.getElementById('appendix');
