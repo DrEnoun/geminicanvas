@@ -1,7 +1,9 @@
-const CACHE = 'canvas-workshop-v9';
+const CACHE = 'canvas-workshop-v10';
 const ASSETS = [
   './', './index.html', './css/styles.css', './js/app.js', './js/molecule-viewer.js',
-  './data/molecules.json', './assets/favicon.svg', './assets/vsepr-participant-input-pack.md', './manifest.webmanifest'
+  './data/molecules.json', './assets/favicon.svg', './assets/vsepr-participant-input-pack.md',
+  './assets/branding/uitm-logo.webp', './assets/branding/gemini-logo.webp', './assets/branding/notebooklm-logo.webp',
+  './manifest.webmanifest'
 ];
 
 self.addEventListener('install', event => {
