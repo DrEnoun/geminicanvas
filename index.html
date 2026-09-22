@@ -515,6 +515,69 @@ Require a learner response before moving to the next stage. Give brief formative
   </div>
 </section>
 
+<section class="slide" data-title="DELIVER — get it into students' hands">
+  <div class="content">
+    <div class="eyebrow">DELIVER · From prototype to classroom</div>
+    <h2>You built it. Now how do students <span class="accent">use it?</span></h2>
+    <p class="lead">For the core workshop, use the simplest delivery route: create a Canvas share link, test it as a student, then place that same link where your students already learn.</p>
+
+    <div class="delivery-grid" style="margin-top:22px">
+      <div class="card">
+        <div class="kicker">01 · SHARE</div>
+        <h3>Get the Canvas link</h3>
+        <div class="delivery-steps">
+          <span><b>1</b> Open your finished Canvas</span>
+          <span><b>2</b> Share &amp; export → Share</span>
+          <span><b>3</b> Review the app information</span>
+          <span><b>4</b> Copy the public link</span>
+        </div>
+        <p class="delivery-note">Shared Canvas content opens on <strong>gemini.google.com</strong>. Ask students to use the link in a web browser.</p>
+      </div>
+
+      <div class="card cyan">
+        <div class="kicker">02 · DELIVER</div>
+        <h3>Put the link where students already are</h3>
+        <div class="delivery-channels">
+          <span>Google Classroom</span><span>LMS</span><span>QR code</span><span>Email</span><span>Class group</span>
+        </div>
+        <p>One Canvas link can become a pre-class activity, in-class station, revision task or formative practice.</p>
+        <div class="flow" style="margin-top:14px"><span class="step">LINK</span><span class="arrow">→</span><span class="step">STUDENT</span><span class="arrow">→</span><span class="step">INTERACT</span></div>
+      </div>
+
+      <div class="card">
+        <div class="kicker">03 · TEST FIRST</div>
+        <h3>Do a student-view check</h3>
+        <div class="delivery-checks">
+          <span>✓ Link opens on another device/account</span>
+          <span>✓ Instructions are obvious</span>
+          <span>✓ Mobile layout works</span>
+          <span>✓ No sensitive/student data requested</span>
+          <span>✓ Sharing is allowed by your institution</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="delivery-helper card soft">
+      <div>
+        <div class="kicker">QUICK HANDOFF</div>
+        <h3>Generate a message for your students</h3>
+      </div>
+      <div class="delivery-helper-fields">
+        <input id="deliveryTitle" type="text" placeholder="Activity title, e.g. VSEPR Shape Explorer" aria-label="Activity title">
+        <input id="deliveryLink" type="url" placeholder="Paste your Canvas share link" aria-label="Canvas share link">
+        <button type="button" class="primary" id="makeDeliveryMessage">Generate</button>
+      </div>
+      <div class="delivery-message" id="deliveryMessage">Paste your Canvas share link to create a ready-to-copy student instruction.</div>
+      <div class="resource-actions">
+        <button type="button" class="secondary" id="copyDeliveryMessage" disabled>Copy student message</button>
+        <span class="pack-status" id="deliveryStatus" aria-live="polite"></span>
+      </div>
+    </div>
+
+    <div class="delivery-warning"><strong>Trainer pre-check:</strong> Workspace administrators can restrict sharing. Test the Share option using the actual institutional account before the workshop. If public sharing is unavailable, use your institution's approved delivery route rather than trying to bypass the restriction.</div>
+  </div>
+</section>
+
 <section class="slide" data-title="Learner mode → Trainer mode">
   <div class="content">
     <div class="eyebrow">SHARE · Teach forward</div>
@@ -630,6 +693,9 @@ Require a learner response before moving to the next stage. Give brief formative
   <p>Near the end of CREATE, participants can enter their own topic, learner group, learning outcome and desired teaching artifact. The wizard generates a ready-to-copy prompt for NotebookLM, which asks NotebookLM to ground the design in the participant's uploaded sources and return a Canvas-ready build prompt.</p>
   <h3>Peer review checklist</h3>
   <p>Accurate · Clear · Interactive · Student-friendly · Reusable</p>
+  <h3>Deliver to students</h3>
+  <p><strong>Core route:</strong> finished Canvas → Share &amp; export → Share → copy public link → test on another device/account → post the link in Google Classroom, LMS, email, class group, or convert it to a QR code using an approved tool.</p>
+  <p><strong>Trainer pre-check:</strong> test sharing with the actual institutional Workspace account before the session. Admin settings can restrict sharing. Shared Canvas content opens on gemini.google.com rather than inside the Gemini mobile app. For multi-user Canvas apps, do not collect sensitive or identifiable student data because shared app data may be visible or editable to people with the public link.</p>
   <h3>Responsible AI</h3>
   <p>Verify subject accuracy and calculations. Avoid uploading identifiable student data. Check institutional requirements before sharing or deploying AI-generated teaching materials.</p>
   <h3>Canvas beyond interactive apps</h3>
