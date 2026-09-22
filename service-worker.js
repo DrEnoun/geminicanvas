@@ -1,4 +1,4 @@
-const CACHE = 'canvas-workshop-v6';
+const CACHE = 'canvas-workshop-v7';
 const ASSETS = [
   './', './index.html', './css/styles.css', './js/app.js', './js/molecule-viewer.js',
   './data/molecules.json', './assets/favicon.svg', './assets/vsepr-participant-input-pack.md', './manifest.webmanifest'
