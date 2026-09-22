@@ -102,13 +102,18 @@
       <div class="section-band"><span class="on">SPARK</span><span class="on">GROUND</span><span>BUILD</span><span>REFINE</span><span>TRANSFORM</span><span>CREATE</span><span>SHARE</span></div>
     </div>
     <div class="card soft">
-      <h3>15-minute grounding sprint</h3>
-      <p>Use a shared VSEPR source pack. Extract:</p>
-      <div class="flow"><span class="step">1 learning outcome</span><span class="step">3 essential concepts</span><span class="step">2 misconceptions</span><span class="step">1 formative check</span></div>
-      <p style="margin-top:20px"><strong>NotebookLM supports the grounding.</strong> Canvas remains the hero.</p>
+      <div class="kicker">HANDS-ON · START HERE</div>
+      <h3>Start in NotebookLM</h3>
+      <p>Everyone uses the same VSEPR source pack first. Follow these steps in order:</p>
+      <div class="handoff-steps">
+        <div class="handoff-step"><b>1</b><span><strong>Download the VSEPR source pack</strong><small>Use the button below.</small></span></div>
+        <div class="handoff-step"><b>2</b><span><strong>Open NotebookLM → create a new notebook</strong><small>Add the downloaded VSEPR pack as a source.</small></span></div>
+        <div class="handoff-step"><b>3</b><span><strong>Open Gemini → Canvas</strong><small>In Gemini, add the NotebookLM notebook as a source: Add files → Notebooks → select your VSEPR notebook.</small></span></div>
+        <div class="handoff-step"><b>4</b><span><strong>Build from the grounded source</strong><small>Move to the next slide and use the shared Canvas build prompt.</small></span></div>
+      </div>
       <div class="resource-actions">
-        <button type="button" class="primary" id="openVseprPack">Open VSEPR input pack</button>
-        <a class="secondary resource-link" href="assets/vsepr-participant-input-pack.md" download>Download .md</a>
+        <a class="primary resource-link" href="assets/vsepr-participant-input-pack.md" download>1 · Download VSEPR source pack</a>
+        <button type="button" class="secondary" id="openVseprPack">Preview source pack</button>
       </div>
     </div>
   </div>
@@ -330,29 +335,31 @@
 
 <div id="vseprPack" class="resource-drawer" aria-hidden="true">
   <button class="secondary appendix-close" id="closeVseprPack">Close</button>
-  <div class="eyebrow">Participant Hands-on Resource</div>
-  <h2 style="font-size:36px">VSEPR Shared Input Pack</h2>
-  <p>Use this common source during <strong>GROUND → BUILD</strong>. Copy it into your preferred grounding workflow, or download the Markdown file and upload it as a source.</p>
-  <div class="resource-actions">
-    <button type="button" class="primary" id="copyVseprPack">Copy full pack</button>
-    <a class="secondary resource-link" href="assets/vsepr-participant-input-pack.md" download>Download .md</a>
+  <div class="eyebrow">Participant Resource · Step 1</div>
+  <h2 style="font-size:36px">VSEPR Source Pack</h2>
+  <p><strong>This file is the input for NotebookLM.</strong> Do not start by copying this directly into Canvas.</p>
+
+  <div class="handoff-banner">
+    <strong>Your hands-on route</strong>
+    <span>Download pack → NotebookLM → Gemini Canvas → Build</span>
   </div>
-  <div class="pack-status" id="packStatus" aria-live="polite"></div>
 
-  <h3>Learning outcome</h3>
-  <p>Predict and explain the molecular geometry of CH₄, NH₃ and H₂O from the number of bonding domains and lone-pair domains around the central atom.</p>
+  <div class="resource-actions">
+    <a class="primary resource-link" href="assets/vsepr-participant-input-pack.md" download>Download source pack (.md)</a>
+  </div>
 
-  <h3>Core VSEPR ideas</h3>
-  <div class="mini-prompt">• Electron domains repel and arrange to reduce repulsion.
-• A bond or a lone pair counts as one electron domain.
-• Single, double and triple bonds each count as one electron domain for VSEPR geometry.
-• Electron-domain geometry includes bonding domains and lone pairs.
-• Molecular geometry describes the arrangement of atoms only.
-• Four electron domains give tetrahedral electron-domain geometry.
-• Lone pairs repel more strongly than bonding pairs and can compress bond angles.
-• Introductory repulsion order: lone pair–lone pair &gt; lone pair–bonding pair &gt; bonding pair–bonding pair.</div>
+  <h3>What is inside?</h3>
+  <p>A common, verified teaching source covering the learning outcome, core VSEPR concepts, CH₄/NH₃/H₂O comparison, common misconceptions, formative prediction question, and verification facts.</p>
 
-  <h3>Shared molecule set</h3>
+  <h3>Then do this</h3>
+  <div class="handoff-steps">
+    <div class="handoff-step"><b>1</b><span><strong>NotebookLM</strong><small>Create a new notebook and upload this .md file as a source.</small></span></div>
+    <div class="handoff-step"><b>2</b><span><strong>Gemini</strong><small>Open Gemini and choose Canvas.</small></span></div>
+    <div class="handoff-step"><b>3</b><span><strong>Add your NotebookLM notebook</strong><small>Choose Add files → Notebooks → select the VSEPR notebook you just created.</small></span></div>
+    <div class="handoff-step"><b>4</b><span><strong>Build</strong><small>Return to the BUILD slide and use the shared prompt.</small></span></div>
+  </div>
+
+  <h3>Quick scientific preview</h3>
   <div class="pack-table-wrap">
     <table class="pack-table">
       <thead><tr><th>Molecule</th><th>Bonding</th><th>Lone pairs</th><th>Electron-domain geometry</th><th>Molecular geometry</th><th>Angle</th><th>AXE</th></tr></thead>
@@ -364,32 +371,9 @@
     </table>
   </div>
 
-  <h3>Design against these misconceptions</h3>
-  <p><strong>1.</strong> “Four electron domains means every molecule is tetrahedral.” Four domains give tetrahedral <em>electron-domain geometry</em>; molecular geometry depends on bonds versus lone pairs.</p>
-  <p><strong>2.</strong> “Lone pairs do not affect shape.” Lone pairs occupy space and repel other electron domains, influencing geometry and bond angles.</p>
-
-  <h3>Starting prompt for Canvas</h3>
-  <div class="mini-prompt">Act as an educator designing a first-year chemistry microlearning activity.
-
-Using the supplied VSEPR source pack, create an interactive learning experience for CH₄, NH₃ and H₂O.
-
-Use the flow: LEARN → PREDICT → EXPLORE → CHECK → FEEDBACK.
-
-Do not reveal the molecular shape until the learner commits to an answer.
-
-Distinguish electron-domain geometry from molecular geometry and give concise feedback explaining how lone pairs influence molecular geometry and bond angle.
-
-Keep the interface student-friendly and suitable for a short formative learning activity.</div>
-
-  <h3>Verify before accepting the build</h3>
-  <p>CH₄: tetrahedral, AX₄, 109.5° · NH₃: trigonal pyramidal, AX₃E, ~107° · H₂O: bent, AX₂E₂, ~104.5°. All three have tetrahedral electron-domain geometry.</p>
-
-  <h3>Reference</h3>
-  <p>OpenStax Chemistry 2e, Section 7.6, <em>Molecular Structure and Polarity</em>. The downloadable pack contains the reference URL.</p>
-
   <details class="pack-details">
-    <summary>How participants use this in the hands-on session</summary>
-    <p><strong>1.</strong> Open or download this shared pack. <strong>2.</strong> Ground the activity from the pack. <strong>3.</strong> Use the starting prompt in Canvas. <strong>4.</strong> Preview the prototype. <strong>5.</strong> Refine one feature at a time. <strong>6.</strong> Verify the chemistry before sharing.</p>
+    <summary>Why are we starting in NotebookLM?</summary>
+    <p>NotebookLM gives everyone the same grounded scientific source first. We then bring that notebook into Gemini Canvas so the build is based on the shared source rather than starting from an ungrounded blank prompt.</p>
   </details>
 </div>
 
@@ -397,11 +381,11 @@ Keep the interface student-friendly and suitable for a short formative learning 
   <button class="secondary appendix-close" id="closeAppendix">Close</button>
   <div class="eyebrow">Trainer Toolkit Appendix</div>
   <h2 style="font-size:36px">Run it again.</h2>
-  <h3>Participant shared input pack</h3>
-  <p>Open the same VSEPR source pack used during the hands-on session.</p>
+  <h3>Participant VSEPR source pack</h3>
+  <p><strong>Hands-on route:</strong> Download source pack → upload to NotebookLM → add that NotebookLM notebook to Gemini Canvas → build.</p>
   <div class="resource-actions">
-    <button type="button" class="primary" id="openVseprPackFromToolkit">Open VSEPR input pack</button>
-    <a class="secondary resource-link" href="assets/vsepr-participant-input-pack.md" download>Download .md</a>
+    <a class="primary resource-link" href="assets/vsepr-participant-input-pack.md" download>Download VSEPR source pack</a>
+    <button type="button" class="secondary" id="openVseprPackFromToolkit">View instructions</button>
   </div>
   <h3>Core VSEPR build prompt</h3>
   <div class="mini-prompt">Act as an educator designing a first-year chemistry microlearning activity. Create an interactive VSEPR learning experience for CH4, NH3 and H2O. Use the flow LEARN → PREDICT → EXPLORE → CHECK → FEEDBACK. Do not reveal the molecular shape until the learner commits to an answer. Give concise feedback explaining how lone pairs affect molecular geometry.</div>
