@@ -286,6 +286,22 @@ Showcase: about 60–90 seconds, maximum around 2 minutes.
 
 **Problem → Build → one meaningful interaction → Potential**
 
+## Persistent workshop branding
+
+Every participant-facing slide must carry a compact persistent branding strip containing:
+- Universiti Teknologi MARA (UiTM) logo;
+- Google wordmark;
+- Gemini logo;
+- Gemini Notebook logo.
+
+The branding strip must remain secondary to teaching content, use consistent sizing and placement, and remain visible on desktop and mobile.
+
+Every slide must also carry this footer above the presentation controls:
+
+**Developed by DR NUR 'AINUN MOKHTAR, FACULTY OF PHARMACY, UITM BERTAM CAMPUS**
+
+The footer and branding are global deck elements rather than manually repeated slide content so future slides inherit them automatically.
+
 ## Visual direction
 
 Use a clean academic foundation, subtle scientific grids, molecular structures, prototype/workbench metaphors, interface mock-ups, process arrows, approachable educator cues, and multidisciplinary signals.
