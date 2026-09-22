@@ -138,15 +138,21 @@ Peer review should identify at least one factual/pedagogical issue and one usabi
 
 ## GROUND phase
 
-A shared participant-ready VSEPR source pack is embedded in the web deck and also stored at `assets/vsepr-participant-input-pack.md`. Participants should be able to open it directly from the GROUND slide and Trainer Toolkit, copy the full pack, or download the Markdown source for the hands-on build.
+A shared participant-ready VSEPR source pack is stored at `assets/vsepr-participant-input-pack.md`.
 
-NotebookLM is a supporting segment only, around 10–15 minutes.
+The **locked participant workflow** is:
+
+**Download VSEPR source pack → create a NotebookLM notebook → add the pack as a NotebookLM source → open Gemini Canvas → add the NotebookLM notebook through Add files → Notebooks → build from the grounded notebook.**
+
+Do not instruct participants to bypass NotebookLM by copying the source pack directly into Canvas. The source-pack drawer may preview the content, but its primary action is **Download source pack**.
+
+NotebookLM is a short grounding stage, around 10–15 minutes, before the Canvas build.
 
 > **Before Canvas builds, give it reliable content.**
 
-Everyone starts with the same compact VSEPR source material. Participants use their own disciplinary sources later during CREATE.
+Everyone starts with the same VSEPR source in NotebookLM. Participants use their own disciplinary sources later during CREATE.
 
-**Common example → shared success → independent transfer**
+**Common source → NotebookLM grounding → Gemini Canvas build → shared success → independent transfer**
 
 ## Chat vs Canvas
 
