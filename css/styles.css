@@ -95,6 +95,15 @@ p{font-size:clamp(17px,1.55vw,23px);line-height:1.5;margin:0;color:var(--muted)}
 .mol-meta div{background:#f6f7fb;border:1px solid var(--line);border-radius:14px;padding:10px 12px}
 .mol-meta small{display:block;color:var(--muted);font-weight:750;margin-bottom:3px}.mol-meta strong{font-size:15px}
 @media(max-width:620px){.mol-meta{grid-template-columns:1fr}.molecule-stage canvas{height:290px}.molecule-stage{min-height:290px}}
+/* guided calculation tutor build */
+.calc-refine-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.calc-refine-card{display:flex;flex-direction:column;gap:10px;min-height:310px}
+.calc-refine-card .num{font-size:11px;font-weight:900;letter-spacing:.13em;color:var(--purple)}
+.calc-refine-card .mini-prompt{flex:1;font-size:13px;line-height:1.45}
+.calc-refine-card .secondary{align-self:flex-start}
+.build-copy-text{white-space:pre-wrap}
+@media(max-width:900px){.calc-refine-grid{grid-template-columns:1fr}.calc-refine-card{min-height:0}}
+
 /* stoich */
 .stoich-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:start}
 .equation{font-size:clamp(28px,3.4vw,50px);font-weight:900;letter-spacing:-.04em;text-align:center;padding:24px;background:#151d33;color:#fff;border-radius:22px;margin-bottom:18px}
