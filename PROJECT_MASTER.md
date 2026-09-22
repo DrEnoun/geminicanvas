@@ -193,7 +193,13 @@ Principle:
 
 > **Don't ask Canvas merely to build a calculator. Ask it to scaffold the thinking.**
 
-Using Mg = 24.305 g mol-1 and MgO = 40.304 g mol-1, 6.0 g Mg is about 0.2469 mol and gives about 9.95 g MgO before final significant-figure treatment.
+TRANSFORM must include a guided build sequence comparable to the VSEPR hands-on rather than only showing a finished tutor. The locked sequence is:
+
+**New Canvas → starter tutor prompt → preview → test a wrong answer → follow-up 1: scaffold/retry → follow-up 2: make reasoning path visible → follow-up 3: classroom/mobile refinement → test → compare with working tutor.**
+
+This is a short transfer exercise using the fixed trainer-provided Mg → MgO problem, so participants do not create a second NotebookLM notebook for this demonstration. When they move to their own discipline/material in CREATE, they return to the grounded NotebookLM → Canvas workflow using the Prompt Generator Wizard.
+
+Using the workshop molar masses Mg = 24.3 g mol-1 and MgO = 40.3 g mol-1, 6.0 g Mg gives about 9.95 g MgO before final significant-figure treatment.
 
 Secondary example:
 
