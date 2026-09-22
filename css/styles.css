@@ -120,6 +120,13 @@ p{font-size:clamp(17px,1.55vw,23px);line-height:1.5;margin:0;color:var(--muted)}
 .nav-left{display:flex;align-items:center;gap:12px;min-width:0}.brand{font-weight:800;font-size:13px;white-space:nowrap}.slide-title{font-size:12px;color:#aeb5c8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:40vw}.nav-right{display:flex;align-items:center;gap:8px}.navbtn{width:38px;height:38px;border-radius:12px;border:1px solid #3b435b;background:#20283d;color:white;font-size:18px}.navbtn:hover{background:#2d3650}.counter{font-size:12px;color:#b8bfd0;min-width:55px;text-align:center}.bar{position:absolute;left:0;bottom:58px;height:4px;background:linear-gradient(90deg,var(--purple),var(--cyan));width:0;transition:.4s;z-index:51}
 .hint{position:absolute;right:26px;top:22px;z-index:5;font-size:11px;color:#8e95a8;background:rgba(255,255,255,.75);border:1px solid var(--line);padding:7px 10px;border-radius:999px}
 /* participant source pack */
+.handoff-steps{display:grid;gap:10px;margin-top:16px}
+.handoff-step{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;padding:11px 12px;border:1px solid var(--line);border-radius:14px;background:white}
+.handoff-step>b{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:#ece9ff;color:var(--purple);font-size:14px}
+.handoff-step span{display:grid;gap:3px}
+.handoff-step small{color:#727a91;line-height:1.35}
+.handoff-banner{display:grid;gap:5px;margin-top:18px;padding:14px 16px;border-radius:15px;background:#f0efff;border:1px solid #dcd8ff}
+.handoff-banner span{color:#5c647b}
 .resource-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:18px}
 .resource-link{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
 .resource-drawer{position:absolute;inset:0 0 58px auto;width:min(720px,96vw);background:#fbfbfe;border-left:1px solid var(--line);z-index:65;transform:translateX(105%);transition:.45s;box-shadow:-18px 0 50px rgba(20,26,50,.14);padding:28px;overflow:auto}
