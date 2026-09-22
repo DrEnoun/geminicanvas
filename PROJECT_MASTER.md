@@ -228,13 +228,13 @@ The wizard collects four essential inputs:
 
 The creation-type menu should include Quiz, Interactive slides, Interactive visualization, Concept explorer, Guided problem-solving tutor, Simulation, Decision tree/scenario activity, Microlearning webpage, Flashcards/study aid, Infographic, Slide deck, and **Other** with a free-text field.
 
-Optional refinements may include time available, preferred learner interaction, feedback style, output language, a source to prioritise, and an open **Anything else?** field.
+Optional refinements may include the current teaching challenge, time available, preferred learner interaction, feedback style, output language, approximate output size, a source to prioritise, and an open **Anything else?** field.
 
 The wizard does **not** replace NotebookLM. Its output is a copy-ready prompt for NotebookLM. That prompt tells NotebookLM to ground the design in the participant's uploaded sources, identify source gaps instead of inventing unsupported subject content, propose a learning flow, and produce one self-contained **Canvas-ready prompt**.
 
 Locked transfer workflow:
 
-**Participant's own teaching sources → NotebookLM → Prompt Generator output → grounded design + Canvas-ready prompt → Gemini Canvas → prototype → test → refine**
+**Upload own teaching sources to NotebookLM + complete Prompt Generator Wizard → paste generated prompt into NotebookLM → grounded design + Canvas-ready prompt → Gemini Canvas → prototype → test → refine**
 
 The wizard should be general enough for multiple disciplines and should not require participants to understand prompt engineering.
 
