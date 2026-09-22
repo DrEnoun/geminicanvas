@@ -119,6 +119,20 @@ p{font-size:clamp(17px,1.55vw,23px);line-height:1.5;margin:0;color:var(--muted)}
 #nav{position:absolute;left:0;right:0;bottom:0;height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 20px 0 26px;background:rgba(15,20,36,.92);color:white;z-index:50;backdrop-filter:blur(10px)}
 .nav-left{display:flex;align-items:center;gap:12px;min-width:0}.brand{font-weight:800;font-size:13px;white-space:nowrap}.slide-title{font-size:12px;color:#aeb5c8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:40vw}.nav-right{display:flex;align-items:center;gap:8px}.navbtn{width:38px;height:38px;border-radius:12px;border:1px solid #3b435b;background:#20283d;color:white;font-size:18px}.navbtn:hover{background:#2d3650}.counter{font-size:12px;color:#b8bfd0;min-width:55px;text-align:center}.bar{position:absolute;left:0;bottom:58px;height:4px;background:linear-gradient(90deg,var(--purple),var(--cyan));width:0;transition:.4s;z-index:51}
 .hint{position:absolute;right:26px;top:22px;z-index:5;font-size:11px;color:#8e95a8;background:rgba(255,255,255,.75);border:1px solid var(--line);padding:7px 10px;border-radius:999px}
+/* participant source pack */
+.resource-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:18px}
+.resource-link{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+.resource-drawer{position:absolute;inset:0 0 58px auto;width:min(720px,96vw);background:#fbfbfe;border-left:1px solid var(--line);z-index:65;transform:translateX(105%);transition:.45s;box-shadow:-18px 0 50px rgba(20,26,50,.14);padding:28px;overflow:auto}
+.resource-drawer.open{transform:none}
+.resource-drawer h3{margin-top:24px}
+.pack-status{min-height:24px;margin-top:10px;color:#536078;font-size:13px;font-weight:750}
+.pack-table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px;background:white}
+.pack-table{width:100%;border-collapse:collapse;min-width:650px;font-size:13px}
+.pack-table th,.pack-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line)}
+.pack-table th{background:#f2f1ff;color:#39405a}
+.pack-details{margin-top:24px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:white}
+.pack-details summary{font-weight:850;cursor:pointer}
+
 /* appendix drawer */
 #appendix{position:absolute;inset:0 0 58px auto;width:min(520px,92vw);background:#fbfbfe;border-left:1px solid var(--line);z-index:60;transform:translateX(105%);transition:.45s;box-shadow:-18px 0 50px rgba(20,26,50,.14);padding:28px;overflow:auto}
 #appendix.open{transform:none}#appendix h3{margin-top:22px}.appendix-close{float:right}.mini-prompt{background:#161d32;color:#e9ecf8;border-radius:16px;padding:16px;font-family:ui-monospace,monospace;font-size:13px;line-height:1.5;white-space:pre-wrap}
