@@ -3,7 +3,7 @@
   const slides=[...document.querySelectorAll('.slide')]; let current=0; let touchX=null;
   const title=document.getElementById('navTitle'), counter=document.getElementById('counter'), bar=document.getElementById('bar'), navStep=document.getElementById('navStep');
   const stepMenu=document.getElementById('stepMenu'), stepMenuGrid=document.getElementById('stepMenuGrid');
-  const steps=[
+  const workshopSteps=[
     {n:1,name:'SPARK',sub:'Discover'},
     {n:2,name:'GROUND',sub:'Reliable content'},
     {n:3,name:'BUILD',sub:'First prototype'},
@@ -17,10 +17,10 @@
   slides.forEach((slide,i)=>{if(slide.classList.contains('phase-transition'))transitionIndex[Number(slide.dataset.step)]=i});
   function stepForSlide(i){
     let found=null;
-    for(const s of steps){if(transitionIndex[s.n]!==undefined&&i>=transitionIndex[s.n])found=s}
+    for(const s of workshopSteps){if(transitionIndex[s.n]!==undefined&&i>=transitionIndex[s.n])found=s}
     return found;
   }
-  stepMenuGrid.innerHTML=steps.map(s=>`<button type="button" class="step-jump" data-step="${s.n}"><span class="step-jump-num">${String(s.n).padStart(2,'0')}</span><span><strong>${s.name}</strong><small>${s.sub}</small></span></button>`).join('');
+  stepMenuGrid.innerHTML=workshopSteps.map(s=>`<button type="button" class="step-jump" data-step="${s.n}"><span class="step-jump-num">${String(s.n).padStart(2,'0')}</span><span><strong>${s.name}</strong><small>${s.sub}</small></span></button>`).join('');
   function closeStepMenu(){stepMenu.classList.remove('open');stepMenu.setAttribute('aria-hidden','true')}
   function openStepMenu(){stepMenu.classList.add('open');stepMenu.setAttribute('aria-hidden','false')}
   function toggleStepMenu(){stepMenu.classList.contains('open')?closeStepMenu():openStepMenu()}
