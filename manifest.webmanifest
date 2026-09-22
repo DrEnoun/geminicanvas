@@ -1,0 +1,12 @@
+{
+  "name": "From Idea to Interactive Learning — Gemini Canvas for Educators",
+  "short_name": "Canvas Workshop",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f8fc",
+  "theme_color": "#253052",
+  "icons": [
+    {"src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "CH4": {
+    "formula": "CH\u2084",
+    "center": "C",
+    "centerColor": "#253052",
+    "axe": "AX\u2084",
+    "geometry": "Tetrahedral",
+    "angle": "109.5\u00b0",
+    "atoms": [
+      {
+        "element": "H",
+        "vector": [
+          0.5773502691896258,
+          0.5773502691896258,
+          0.5773502691896258
+        ]
+      },
+      {
+        "element": "H",
+        "vector": [
+          -0.5773502691896258,
+          -0.5773502691896258,
+          0.5773502691896258
+        ]
+      },
+      {
+        "element": "H",
+        "vector": [
+          -0.5773502691896258,
+          0.5773502691896258,
+          -0.5773502691896258
+        ]
+      },
+      {
+        "element": "H",
+        "vector": [
+          0.5773502691896258,
+          -0.5773502691896258,
+          -0.5773502691896258
+        ]
+      }
+    ],
+    "lonePairs": [],
+    "note": "Rotate the molecule to inspect the tetrahedral arrangement from different viewpoints."
+  },
+  "NH3": {
+    "formula": "NH\u2083",
+    "center": "N",
+    "centerColor": "#4c5fc7",
+    "axe": "AX\u2083E",
+    "geometry": "Trigonal pyramidal",
+    "angle": "\u2248107\u00b0",
+    "atoms": [
+      {
+        "element": "H",
+        "vector": [
+          0.9282139497345557,
+          0.0,
+          0.3720468566164423
+        ]
+      },
+      {
+        "element": "H",
+        "vector": [
+          -0.46410697486727764,
+          0.8038568606172173,
+          0.3720468566164423
+        ]
+      },
+      {
+        "element": "H",
+        "vector": [
+          -0.46410697486727825,
+          -0.8038568606172171,
+          0.3720468566164423
+        ]
+      }
+    ],
+    "lonePairs": [
+      [
+        -0.0,
+        -0.0,
+        -1.0
+      ]
+    ],
+    "note": "The lone pair occupies an electron domain and compresses the H\u2013N\u2013H angle below the ideal tetrahedral value."
+  },
+  "H2O": {
+    "formula": "H\u2082O",
+    "center": "O",
+    "centerColor": "#c85a78",
+    "axe": "AX\u2082E\u2082",
+    "geometry": "Bent",
+    "angle": "\u2248104.5\u00b0",
+    "atoms": [
+      {
+        "element": "H",
+        "vector": [
+          0.7906895737438433,
+          0,
+          0.6122172800344493
+        ]
+      },
+      {
+        "element": "H",
+        "vector": [
+          -0.7906895737438433,
+          0,
+          0.6122172800344493
+        ]
+      }
+    ],
+    "lonePairs": [
+      [
+        0.0,
+        0.7848827655334262,
+        -0.6196442885790207
+      ],
+      [
+        0.0,
+        -0.7848827655334262,
+        -0.6196442885790207
+      ]
+    ],
+    "note": "Two lone-pair domains produce a bent molecular geometry and further compress the H\u2013O\u2013H angle."
+  }
+}

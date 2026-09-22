@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#253052" />
+<title>From Idea to Interactive Learning — Gemini Canvas for Educators</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<div id="deck">
+<div class="hint">← → navigate · A appendix</div>
+
+<section class="slide active" data-title="From Idea to Interactive Learning">
+  <div class="content hero">
+    <div>
+      <div class="eyebrow">Training of Trainers · Interactive Maker Workshop</div>
+      <h1>From Idea to <span class="accent">Interactive Learning</span></h1>
+      <p class="lead">Gemini Canvas for Educators</p>
+      <div class="card soft" style="margin-top:28px;max-width:820px">
+        <h3>Turn your teaching idea into an interactive learning experience — without coding.</h3>
+        <div class="flow"><span class="step">BUILD</span><span class="arrow">→</span><span class="step">TEST</span><span class="arrow">→</span><span class="step">REFINE</span><span class="arrow">→</span><span class="step">REPURPOSE</span><span class="arrow">→</span><span class="step">TEACH</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="orbit">
+        <svg viewBox="0 0 520 440">
+          <defs><linearGradient id="g1" x1="0" x2="1"><stop stop-color="#6556d8"/><stop offset="1" stop-color="#20a6b7"/></linearGradient></defs>
+          <rect x="76" y="58" width="368" height="300" rx="30" fill="#fff" stroke="#dfe3ee" stroke-width="2"/>
+          <rect x="98" y="82" width="324" height="48" rx="16" fill="#f3f2ff"/>
+          <circle cx="123" cy="106" r="8" fill="#6556d8"/><rect x="142" y="98" width="118" height="16" rx="8" fill="#c7c3ef"/>
+          <rect x="98" y="151" width="142" height="178" rx="20" fill="#f7f8fc" stroke="#e4e6ee"/>
+          <rect x="260" y="151" width="162" height="178" rx="20" fill="#eef9f8" stroke="#d8efed"/>
+          <circle cx="341" cy="240" r="28" fill="url(#g1)"/>
+          <circle cx="303" cy="202" r="15" fill="#8c7cf0"/><circle cx="383" cy="202" r="15" fill="#8c7cf0"/><circle cx="303" cy="281" r="15" fill="#20a6b7"/><circle cx="383" cy="281" r="15" fill="#20a6b7"/>
+          <line x1="341" y1="240" x2="303" y2="202" stroke="#aeb5c8" stroke-width="8"/><line x1="341" y1="240" x2="383" y2="202" stroke="#aeb5c8" stroke-width="8"/><line x1="341" y1="240" x2="303" y2="281" stroke="#aeb5c8" stroke-width="8"/><line x1="341" y1="240" x2="383" y2="281" stroke="#aeb5c8" stroke-width="8"/>
+          <path d="M70 385 C160 345, 270 425, 454 376" fill="none" stroke="url(#g1)" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-title="SPARK — Predict before reveal">
+  <div class="content">
+    <div class="eyebrow">SPARK · Discover</div>
+    <h2>Predict before we reveal.</h2>
+    <p class="lead">CH₄, NH₃ and H₂O share a tetrahedral electron-domain arrangement. Do they have the same <strong>molecular shape</strong>?</p>
+    <div class="molecule-grid" id="predictionGrid">
+      <div class="card molecule" data-mol="CH4" data-answer="Tetrahedral">
+        <div><div class="formula">CH₄</div><div class="lewis"><svg viewBox="0 0 160 120" aria-label="Lewis structure of methane"><text x="74" y="67" font-size="26" font-weight="800">C</text><text x="74" y="20" font-size="22">H</text><text x="74" y="114" font-size="22">H</text><text x="12" y="67" font-size="22">H</text><text x="134" y="67" font-size="22">H</text><line x1="80" y1="43" x2="80" y2="25" stroke="#596176" stroke-width="3"/><line x1="80" y1="74" x2="80" y2="95" stroke="#596176" stroke-width="3"/><line x1="58" y1="60" x2="34" y2="60" stroke="#596176" stroke-width="3"/><line x1="102" y1="60" x2="126" y2="60" stroke="#596176" stroke-width="3"/></svg></div></div>
+        <div class="choice-row"><button class="choice">Tetrahedral</button><button class="choice">Trigonal pyramidal</button><button class="choice">Bent</button></div><div class="answer">Shape hidden</div>
+      </div>
+      <div class="card molecule" data-mol="NH3" data-answer="Trigonal pyramidal">
+        <div><div class="formula">NH₃</div><div class="lewis"><svg viewBox="0 0 160 120" aria-label="Lewis structure of ammonia"><text x="74" y="67" font-size="26" font-weight="800">N</text><text x="74" y="114" font-size="22">H</text><text x="16" y="82" font-size="22">H</text><text x="132" y="82" font-size="22">H</text><line x1="80" y1="74" x2="80" y2="95" stroke="#596176" stroke-width="3"/><line x1="60" y1="70" x2="38" y2="78" stroke="#596176" stroke-width="3"/><line x1="100" y1="70" x2="123" y2="78" stroke="#596176" stroke-width="3"/><circle cx="73" cy="35" r="3" fill="#6556d8"/><circle cx="87" cy="35" r="3" fill="#6556d8"/></svg></div></div>
+        <div class="choice-row"><button class="choice">Tetrahedral</button><button class="choice">Trigonal pyramidal</button><button class="choice">Bent</button></div><div class="answer">Shape hidden</div>
+      </div>
+      <div class="card molecule" data-mol="H2O" data-answer="Bent">
+        <div><div class="formula">H₂O</div><div class="lewis"><svg viewBox="0 0 160 120" aria-label="Lewis structure of water"><text x="74" y="67" font-size="26" font-weight="800">O</text><text x="18" y="82" font-size="22">H</text><text x="132" y="82" font-size="22">H</text><line x1="60" y1="70" x2="40" y2="78" stroke="#596176" stroke-width="3"/><line x1="100" y1="70" x2="122" y2="78" stroke="#596176" stroke-width="3"/><circle cx="64" cy="35" r="3" fill="#6556d8"/><circle cx="76" cy="35" r="3" fill="#6556d8"/><circle cx="88" cy="35" r="3" fill="#20a6b7"/><circle cx="100" cy="35" r="3" fill="#20a6b7"/></svg></div></div>
+        <div class="choice-row"><button class="choice">Tetrahedral</button><button class="choice">Trigonal pyramidal</button><button class="choice">Bent</button></div><div class="answer">Shape hidden</div>
+      </div>
+    </div>
+    <button id="revealAll" class="primary">Reveal & debrief</button>
+  </div>
+</section>
+
+<section class="slide" data-title="The content did not change">
+  <div class="content grid2">
+    <div>
+      <div class="eyebrow">SPARK · Debrief</div>
+      <div class="big-quote">“The content did not change. <span class="accent">The learning experience did.</span>”</div>
+      <p style="margin-top:24px">Static content can explain. Interactive content can ask learners to <strong>predict, manipulate, check and reflect</strong>.</p>
+    </div>
+    <div class="card cyan">
+      <h3>From passive to participatory</h3>
+      <div class="flow" style="margin-top:20px"><span class="step">SEE</span><span class="arrow">→</span><span class="step">PREDICT</span><span class="arrow">→</span><span class="step">EXPLORE</span><span class="arrow">→</span><span class="step">CHECK</span></div>
+      <p style="margin-top:22px">Canvas is useful when it changes what the learner can <strong>do</strong>, not merely how the content looks.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-title="Chat vs Canvas">
+  <div class="content">
+    <div class="eyebrow">SPARK · Meet the workspace</div>
+    <h2>Chat answers. Canvas helps you <span class="accent">build.</span></h2>
+    <div class="compare">
+      <div class="card"><div class="kicker"><span class="dot"></span>GEMINI CHAT</div><h3>Ask → Answer</h3><p>Useful for explanations, brainstorming, rewriting and quick support.</p><div class="process-line"><b>Question</b><span>→</span><b>Response</b></div></div>
+      <div class="versus">VS</div>
+      <div class="card dark"><div class="kicker" style="background:#28324e;border-color:#3c4665;color:#dfe3f2"><span class="dot"></span>GEMINI CANVAS</div><h3>Ask → Build → Preview → Refine</h3><p>A working space for developing and iterating content or interactive experiences.</p><div class="process-line"><b>Idea</b><span>→</span><b>Prototype</b><span>→</span><b>Iteration</b></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-title="GROUND — reliable teaching content">
+  <div class="content grid2">
+    <div>
+      <div class="phase">GROUND</div><div class="phase-sub">Design from reliable content</div>
+      <p class="lead" style="margin-top:18px">Before we build, decide what the app should teach — and what source material it should trust.</p>
+      <div class="section-band"><span class="on">SPARK</span><span class="on">GROUND</span><span>BUILD</span><span>REFINE</span><span>TRANSFORM</span><span>CREATE</span><span>SHARE</span></div>
+    </div>
+    <div class="card soft">
+      <h3>15-minute grounding sprint</h3>
+      <p>Use a shared VSEPR source pack. Extract:</p>
+      <div class="flow"><span class="step">1 learning outcome</span><span class="step">3 essential concepts</span><span class="step">2 misconceptions</span><span class="step">1 formative check</span></div>
+      <p style="margin-top:20px"><strong>NotebookLM supports the grounding.</strong> Canvas remains the hero.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-title="BUILD — prompt to prototype">
+  <div class="content">
+    <div class="eyebrow">BUILD · Develop the first prototype</div>
+    <h2>Start simple. Make it work.</h2>
+    <div class="grid2" style="margin-top:22px">
+      <div class="prompt-box" id="promptBox">
+        <div class="prompt-line">Act as an educator designing a first-year chemistry microlearning activity.</div>
+        <div class="prompt-line">Create an interactive VSEPR learning experience for CH₄, NH₃ and H₂O.</div>
+        <div class="prompt-line">Flow: LEARN → PREDICT → EXPLORE → CHECK → FEEDBACK.</div>
+        <div class="prompt-line">Do not reveal the molecular shape until the learner commits to an answer.</div>
+        <div class="prompt-line">Give concise feedback explaining how lone pairs affect molecular geometry.</div>
+      </div>
+      <div class="card">
+        <h3>One lightweight prompt formula</h3>
+        <div class="flow"><span class="step">WHO</span><span class="arrow">→</span><span class="step">TASK</span><span class="arrow">→</span><span class="step">CONTEXT</span><span class="arrow">→</span><span class="step">OUTPUT</span></div>
+        <p style="margin-top:24px">Then stop writing the “perfect prompt”. <strong>Preview the prototype and improve it.</strong></p>
+        <button id="animatePrompt" class="secondary" style="margin-top:18px">Animate prompt build</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-title="REFINE — small follow-ups beat one giant prompt">
+  <div class="content">
+    <div class="eyebrow">REFINE · Validate and improve</div>
+    <h2>Small follow-ups beat one giant prompt.</h2>
+    <div class="iteration">
+      <div class="iter"><span class="num">VERSION 01</span><strong>Make it work</strong><p>Prediction, check and feedback.</p></div>
+      <div class="iter"><span class="num">VERSION 02</span><strong>Make it clearer</strong><p>Simplify wording and improve layout.</p></div>
+      <div class="iter"><span class="num">VERSION 03</span><strong>Make it interactive</strong><p>Add a manipulable spatial model.</p></div>
+      <div class="iter"><span class="num">VERSION 04</span><strong>Make it robust</strong><p>Test edge cases and verify content.</p></div>
+    </div>
+    <div class="card cyan" style="margin-top:22px"><p><strong>Workshop habit:</strong> Prompt → Preview → Inspect → Refine → Test → Fix.</p></div>
+  </div>
+</section>
+
+<section class="slide" data-title="REFINE — add spatial interaction">
+  <div class="content grid2">
+    <div>
+      <div class="eyebrow">REFINE · Progressive enhancement</div>
+      <h2>Now add the “wow” — <span class="accent">after</span> the pedagogy works.</h2>
+      <p class="lead">Ask Canvas to add an interactive molecular visual that helps learners understand spatial geometry.</p>
+      <div class="card" style="margin-top:22px"><p><strong>Follow-up prompt:</strong><br>“Add a rotatable 3D-style molecular model. Keep the prediction step first. Do not let the visual reveal the answer before the learner responds.”</p></div>
+    </div>
+    <div class="card viewer" aria-label="Interactive 3D VSEPR molecular viewer">
+      <div class="molecule-stage">
+        <canvas id="moleculeCanvas" width="760" height="430" tabindex="0" aria-label="Interactive 3D molecular model. Drag to rotate, use the zoom control, or enable auto rotation."></canvas>
+        <div class="mol-hint">Drag / swipe to rotate · wheel or slider to zoom</div>
+        <div class="viewer-status" id="viewerStatus" aria-live="polite">Interactive model ready</div>
+      </div>
+      <div class="mol-controls">
+        <div class="mol-buttons" role="group" aria-label="Choose molecule">
+          <button type="button" class="mol-btn active" data-molecule="CH4">CH₄</button>
+          <button type="button" class="mol-btn" data-molecule="NH3">NH₃</button>
+          <button type="button" class="mol-btn" data-molecule="H2O">H₂O</button>
+        </div>
+        <div class="mol-actions">
+          <button type="button" class="secondary" id="toggleRotate">Pause rotation</button>
+          <button type="button" class="secondary" id="toggleDomains" aria-pressed="true">Hide lone pairs</button>
+          <button type="button" class="secondary" id="resetMolecule">Reset view</button>
+        </div>
+      </div>
+      <div class="zoom-row">
+        <label for="molZoom"><strong>Zoom</strong></label>
+        <input id="molZoom" type="range" min="70" max="150" value="100" step="1" aria-label="Molecule zoom">
+        <span id="zoomValue">100%</span>
+      </div>
+      <div class="mol-meta" aria-live="polite">
+        <div><small>VSEPR</small><strong id="molAxe">AX₄</strong></div>
+        <div><small>Molecular geometry</small><strong id="molGeometry">Tetrahedral</strong></div>
+        <div><small>Bond angle</small><strong id="molAngle">109.5°</strong></div>
+      </div>
+      <p class="viewer-note" id="molNote">Rotate the molecule to inspect the tetrahedral arrangement from different viewpoints.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-title="REFINE — red team your app">
+  <div class="content">
+    <div class="eyebrow">REFINE · Responsible AI by doing</div>
+    <h2>Now try to make your own app <span style="color:var(--rose)">fail.</span></h2>
+    <p class="lead">AI output is a prototype, not an authority.</p>
+    <div class="redgrid">
+      <div class="redcard"><b>Accuracy</b><p>Are the shapes, electron domains and explanations chemically correct?</p></div>
+      <div class="redcard"><b>Logic</b><p>Can a wrong answer accidentally be accepted as correct?</p></div>
+      <div class="redcard"><b>Usability</b><p>Does it still work on a small screen and with unexpected input?</p></div>
+      <div class="redcard"><b>Pedagogy</b><p>Does the app scaffold thinking, or merely reveal answers?</p></div>
+    </div>
+    <div class="flow"><span class="step">BUILD</span><span class="arrow">→</span><span class="step">TEST</span><span class="arrow">→</span><span class="step">BREAK</span><span class="arrow">→</span><span class="step">VERIFY</span><span class="arrow">→</span><span class="step">REFINE</span></div>
+  </div>
+</section>
+
+<section class="slide" data-title="TRANSFORM — same pedagogy, new cognitive task">
+  <div class="content">
+    <div class="phase">TRANSFORM</div><div class="phase-sub">Transfer the design pattern</div>
+    <div class="grid2" style="margin-top:28px">
+      <div class="card soft"><div class="kicker">VISUAL CONCEPT</div><h3>VSEPR</h3><p>Predict → manipulate → compare → explain</p></div>
+      <div class="card cyan"><div class="kicker">QUANTITATIVE REASONING</div><h3>Stoichiometry</h3><p>Identify → convert → ratio → calculate → check</p></div>
+    </div>
+    <div class="big-quote" style="margin-top:30px;font-size:clamp(26px,3.3vw,46px)">The pedagogy stays reusable. <span class="accent">The cognitive task changes.</span></div>
+  </div>
+</section>
+
+<section class="slide" data-title="Stoichiometry tutor — scaffold the thinking">
+  <div class="content stoich-layout">
+    <div>
+      <div class="eyebrow">TRANSFORM · Guided calculation learning</div>
+      <h2>Don't build a calculator. Build a <span class="accent">tutor.</span></h2>
+      <div class="equation">2Mg + O₂ → 2MgO</div>
+      <p>If <strong>6.0 g Mg</strong> reacts completely with excess oxygen, what mass of MgO is formed?</p>
+      <div class="card" style="margin-top:18px"><p>Use <strong>M(Mg) = 24.3 g mol⁻¹</strong> and <strong>M(MgO) = 40.3 g mol⁻¹</strong>.</p></div>
+    </div>
+    <div class="card" id="stoichTutor">
+      <div class="progress-dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+      <div class="tutor-step on" data-step="0"><h3>1 · Identify the given quantity</h3><p>What quantity is provided?</p><div class="field"><select id="s1"><option value="">Choose…</option><option value="mass">Mass of Mg</option><option value="moles">Moles of Mg</option><option value="massproduct">Mass of MgO</option></select><button class="primary tutorCheck">Check</button></div><div class="feedback"></div></div>
+      <div class="tutor-step" data-step="1"><h3>2 · Convert Mg mass to moles</h3><p>n = m / M. Enter moles of Mg.</p><div class="field"><input id="s2" type="number" step="0.001" placeholder="mol"><button class="primary tutorCheck">Check</button></div><div class="feedback"></div></div>
+      <div class="tutor-step" data-step="2"><h3>3 · Apply the mole ratio</h3><p>From 2Mg → 2MgO, what is the Mg : MgO mole ratio?</p><div class="field"><select id="s3"><option value="">Choose…</option><option value="1">1 : 1</option><option value="2">2 : 1</option><option value="0.5">1 : 2</option></select><button class="primary tutorCheck">Check</button></div><div class="feedback"></div></div>
+      <div class="tutor-step" data-step="3"><h3>4 · Convert moles of MgO to mass</h3><p>m = n × M. Enter the expected mass of MgO.</p><div class="field"><input id="s4" type="number" step="0.01" placeholder="g"><button class="primary tutorCheck">Check</button></div><div class="feedback"></div></div>
+      <div class="tutor-step" data-step="4"><h3>5 · Final check</h3><p>Does your answer include the correct unit and sensible magnitude?</p><div class="feedback good">Expected answer ≈ <strong>9.95 g MgO</strong>. The tutor scaffolds the reasoning instead of jumping straight to the number.</div><button class="secondary" id="restartTutor" style="margin-top:14px">Restart tutor</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-title="Cross-disciplinary transfer">
+  <div class="content">
+    <div class="eyebrow">TRANSFORM · Same workflow, different disciplines</div>
+    <h2>One design pattern. Many classrooms.</h2>
+    <div class="disciplines">
+      <div class="discipline"><div class="ico">⚙️</div><strong>Engineering</strong><small>Material balance · unit conversion</small></div>
+      <div class="discipline"><div class="ico">🧪</div><strong>MLT</strong><small>Dilution · concentration · lab reasoning</small></div>
+      <div class="discipline"><div class="ico">🌿</div><strong>Environmental</strong><small>Pollutant concentration · treatment calculations</small></div>
+      <div class="discipline"><div class="ico">🦴</div><strong>Physiotherapy</strong><small>Movement classification · anatomy exploration</small></div>
+      <div class="discipline"><div class="ico">🩺</div><strong>Nursing</strong><small>Dosage reasoning · clinical learning pathways</small></div>
+    </div>
+    <div class="card soft" style="margin-top:22px"><h3>Quick variation</h3><p>Repurpose the stoichiometry scaffold from Mg → MgO to <strong>CaCO₃ → CaO + CO₂</strong> for a materials/environmental context.</p></div>
+  </div>
+</section>
+
+<section class="slide" data-title="CREATE — build your own discipline prototype">
+  <div class="content grid2">
+    <div>
+      <div class="phase">CREATE</div><div class="phase-sub">Implement in your own discipline</div>
+      <p class="lead" style="margin-top:18px">Now make it yours. Start from one real teaching difficulty, not from a desire to “use AI”.</p>
+    </div>
+    <div class="card">
+      <h3>35-minute individual build</h3>
+      <div class="flow"><span class="step">1 · Problem</span><span class="arrow">→</span><span class="step">2 · Outcome</span><span class="arrow">→</span><span class="step">3 · Interaction</span><span class="arrow">→</span><span class="step">4 · Feedback</span></div>
+      <p style="margin-top:22px"><strong>Choose a format:</strong> interactive learning tool, mini learning page, or teaching innovation prototype.</p>
+      <div style="margin-top:14px"><span class="pill">quiz</span><span class="pill">concept explorer</span><span class="pill">guided calculator</span><span class="pill">decision tree</span><span class="pill">simulation</span><span class="pill">micro-course</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-title="Peer test — swap, test, refine">
+  <div class="content">
+    <div class="eyebrow">CREATE · Peer validation</div>
+    <h2>Swap devices. Test like a student.</h2>
+    <div class="grid3" style="margin-top:26px">
+      <div class="card"><h3>Academic</h3><p>Is it <strong>accurate</strong>? Can you find one factual or reasoning issue?</p></div>
+      <div class="card"><h3>Experience</h3><p>Is it <strong>clear and student-friendly</strong>? Where do you hesitate?</p></div>
+      <div class="card"><h3>Reuse</h3><p>Is the design <strong>transferable</strong>? What could be adapted for another topic?</p></div>
+    </div>
+    <div class="flow"><span class="step">ACCURATE</span><span class="step">CLEAR</span><span class="step">INTERACTIVE</span><span class="step">STUDENT-FRIENDLY</span><span class="step">REUSABLE</span></div>
+  </div>
+</section>
+
+<section class="slide" data-title="Learner mode → Trainer mode">
+  <div class="content">
+    <div class="eyebrow">SHARE · Teach forward</div>
+    <h2>Switch hats.</h2>
+    <div class="mode-switch">
+      <div class="mode"><div class="kicker">LEARNER MODE</div><h3>I can build it.</h3><p>I understand the workflow because I experienced it.</p></div>
+      <div class="switch-arrow">→</div>
+      <div class="mode active-mode"><div class="kicker" style="background:#28324e;border-color:#3c4665;color:#dfe3f2">TRAINER MODE</div><h3>I can teach it.</h3><p>I can demonstrate, troubleshoot and help a colleague repurpose the pattern.</p></div>
+    </div>
+    <div class="flow"><span class="step">I DO</span><span class="arrow">→</span><span class="step">WE DO</span><span class="arrow">→</span><span class="step">YOU DO</span><span class="arrow">→</span><span class="step">YOU TEACH</span></div>
+  </div>
+</section>
+
+<section class="slide" data-title="Innovation showcase">
+  <div class="content">
+    <div class="eyebrow">SHARE · 90-second innovation showcase</div>
+    <h2>Show me. Don't just tell me.</h2>
+    <div class="grid3" style="margin-top:26px">
+      <div class="card soft"><div class="kicker">01 · PROBLEM</div><h3>What do students struggle with?</h3><p>One sentence. Keep the teaching problem visible.</p></div>
+      <div class="card cyan"><div class="kicker">02 · DEMO</div><h3>Show one working interaction.</h3><p>Let us experience the prototype instead of describing it.</p></div>
+      <div class="card"><div class="kicker">03 · POTENTIAL</div><h3>How could you use or evaluate it?</h3><p>Classroom use, usability, engagement, learning outcome or teaching efficiency.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-title="Two-wave workshop map">
+  <div class="content">
+    <div class="eyebrow">3-hour workshop map</div>
+    <h2>Learn together. Then apply & teach.</h2>
+    <div class="grid2" style="margin-top:26px">
+      <div class="card dark"><div class="kicker" style="background:#28324e;border-color:#3c4665;color:#dfe3f2">WAVE 1 · 90 MIN</div><h3>Learn Together</h3><p><strong>SPARK</strong> 10 min · <strong>GROUND</strong> 15 min · <strong>BUILD</strong> 40 min · <strong>REFINE</strong> 25 min</p></div>
+      <div class="card"><div class="kicker">WAVE 2 · 80 MIN</div><h3>Apply & Teach</h3><p><strong>TRANSFORM</strong> 20 min · <strong>CREATE</strong> 35 min · <strong>TEST & SHARE</strong> 25 min</p></div>
+    </div>
+    <div class="card soft" style="margin-top:18px;text-align:center"><h3>10-minute break / buffer</h3><p>Approximately 70% of the workshop is active practice.</p></div>
+  </div>
+</section>
+
+<section class="slide" data-title="Closing — build one, teach one">
+  <div class="content">
+    <div class="eyebrow">CLOSE · Keep building</div>
+    <div class="big-quote">Start with a teaching problem.<br><span class="accent">Build one. Test one. Teach one.</span></div>
+    <p class="lead" style="margin-top:28px">The goal is not to become a programmer. It is to become a more capable designer of learning experiences.</p>
+    <div class="flow"><span class="step">IDEA</span><span class="arrow">→</span><span class="step">INTERACTION</span><span class="arrow">→</span><span class="step">EVIDENCE</span><span class="arrow">→</span><span class="step">INNOVATION</span></div>
+    <button class="primary" id="openAppendixFromEnd" style="margin-top:26px">Open trainer toolkit</button>
+  </div>
+</section>
+
+<div id="appendix" aria-hidden="true">
+  <button class="secondary appendix-close" id="closeAppendix">Close</button>
+  <div class="eyebrow">Trainer Toolkit Appendix</div>
+  <h2 style="font-size:36px">Run it again.</h2>
+  <h3>Core VSEPR build prompt</h3>
+  <div class="mini-prompt">Act as an educator designing a first-year chemistry microlearning activity. Create an interactive VSEPR learning experience for CH4, NH3 and H2O. Use the flow LEARN → PREDICT → EXPLORE → CHECK → FEEDBACK. Do not reveal the molecular shape until the learner commits to an answer. Give concise feedback explaining how lone pairs affect molecular geometry.</div>
+  <h3>Refinement prompts</h3>
+  <div class="mini-prompt">• Make the wording suitable for first-year students.
+• Add immediate feedback for wrong answers without revealing the answer too early.
+• Improve the layout for mobile screens.
+• Add a rotatable 3D-style molecular visual, but preserve prediction before reveal.
+• Check all chemistry explanations for internal consistency.</div>
+  <h3>Stoichiometry transformation prompt</h3>
+  <div class="mini-prompt">Keep the same microlearning philosophy, but redesign the experience as a guided mass-to-mass stoichiometry tutor using 2Mg + O2 → 2MgO. Scaffold the learner through balanced equation → given quantity → moles → mole ratio → mass → units → final answer. Give feedback at each step. Do not behave as a one-click calculator.</div>
+  <h3>Peer review checklist</h3>
+  <p>Accurate · Clear · Interactive · Student-friendly · Reusable</p>
+  <h3>Responsible AI</h3>
+  <p>Verify subject accuracy and calculations. Avoid uploading identifiable student data. Check institutional requirements before sharing or deploying AI-generated teaching materials.</p>
+  <h3>Canvas beyond interactive apps</h3>
+  <p>Use the same workspace for lesson-plan drafting, rubric refinement, structured notes and other teaching documents — but keep this workshop centred on interactive learning design.</p>
+</div>
+
+<div class="bar" id="bar"></div>
+<nav id="nav" aria-label="Presentation navigation">
+  <div class="nav-left"><span class="brand">Gemini Canvas for Educators</span><span>·</span><span class="slide-title" id="navTitle"></span></div>
+  <div class="nav-right"><button class="navbtn" id="appendixBtn" title="Trainer toolkit">A</button><button class="navbtn" id="prev" aria-label="Previous slide">←</button><span class="counter" id="counter"></span><button class="navbtn" id="next" aria-label="Next slide">→</button></div>
+</nav>
+</div>
+
+<script src="js/molecule-viewer.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
