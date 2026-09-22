@@ -1,17 +1,57 @@
 
 (() => {
   const slides=[...document.querySelectorAll('.slide')]; let current=0; let touchX=null;
-  const title=document.getElementById('navTitle'), counter=document.getElementById('counter'), bar=document.getElementById('bar');
+  const title=document.getElementById('navTitle'), counter=document.getElementById('counter'), bar=document.getElementById('bar'), navStep=document.getElementById('navStep');
+  const stepMenu=document.getElementById('stepMenu'), stepMenuGrid=document.getElementById('stepMenuGrid');
+  const steps=[
+    {n:1,name:'SPARK',sub:'Discover'},
+    {n:2,name:'GROUND',sub:'Reliable content'},
+    {n:3,name:'BUILD',sub:'First prototype'},
+    {n:4,name:'REFINE',sub:'Test & improve'},
+    {n:5,name:'TRANSFORM',sub:'Transfer pattern'},
+    {n:6,name:'CREATE',sub:'Your discipline'},
+    {n:7,name:'DELIVER',sub:'Students use it'},
+    {n:8,name:'SHARE',sub:'Teach forward'}
+  ];
+  const transitionIndex={};
+  slides.forEach((slide,i)=>{if(slide.classList.contains('phase-transition'))transitionIndex[Number(slide.dataset.step)]=i});
+  function stepForSlide(i){
+    let found=null;
+    for(const s of steps){if(transitionIndex[s.n]!==undefined&&i>=transitionIndex[s.n])found=s}
+    return found;
+  }
+  stepMenuGrid.innerHTML=steps.map(s=>`<button type="button" class="step-jump" data-step="${s.n}"><span class="step-jump-num">${String(s.n).padStart(2,'0')}</span><span><strong>${s.name}</strong><small>${s.sub}</small></span></button>`).join('');
+  function closeStepMenu(){stepMenu.classList.remove('open');stepMenu.setAttribute('aria-hidden','true')}
+  function openStepMenu(){stepMenu.classList.add('open');stepMenu.setAttribute('aria-hidden','false')}
+  function toggleStepMenu(){stepMenu.classList.contains('open')?closeStepMenu():openStepMenu()}
+  stepMenuGrid.addEventListener('click',e=>{
+    const btn=e.target.closest('.step-jump');if(!btn)return;
+    const n=Number(btn.dataset.step);closeStepMenu();if(transitionIndex[n]!==undefined)show(transitionIndex[n]);
+  });
+  document.getElementById('stepsBtn').addEventListener('click',toggleStepMenu);
+  document.getElementById('closeStepMenu').addEventListener('click',closeStepMenu);
+
   function show(i){
     i=Math.max(0,Math.min(slides.length-1,i));
     slides.forEach((s,idx)=>{s.classList.toggle('active',idx===i);s.classList.toggle('exit-left',idx<i)});
     current=i; title.textContent=slides[i].dataset.title||''; counter.textContent=`${i+1} / ${slides.length}`; bar.style.width=`${((i+1)/slides.length)*100}%`;
+    const step=stepForSlide(i);
+    navStep.textContent=step?`${String(step.n).padStart(2,'0')} · ${step.name}`:'INTRO';
+    document.querySelectorAll('.step-jump').forEach(btn=>btn.classList.toggle('active',step&&Number(btn.dataset.step)===step.n));
     slides[i].scrollTop=0;
   }
   document.getElementById('next').addEventListener('click',()=>show(current+1));
   document.getElementById('prev').addEventListener('click',()=>show(current-1));
-  document.addEventListener('keydown',e=>{if(document.getElementById('appendix').classList.contains('open')){if(e.key==='Escape')closeAppendix();return;} if(['ArrowRight','PageDown',' '].includes(e.key)){if(!/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)){e.preventDefault();show(current+1)}} if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(current-1)} if(e.key.toLowerCase()==='a')toggleAppendix();});
-  document.getElementById('deck').addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX},{passive:true});
+  document.addEventListener('keydown',e=>{
+    const tag=document.activeElement?.tagName||'';
+    if(document.getElementById('appendix').classList.contains('open')){if(e.key==='Escape')closeAppendix();return;}
+    if(stepMenu.classList.contains('open')){if(e.key==='Escape')closeStepMenu();return;}
+    if(['ArrowRight','PageDown',' '].includes(e.key)){if(!/INPUT|SELECT|TEXTAREA/.test(tag)){e.preventDefault();show(current+1)}}
+    if(['ArrowLeft','PageUp'].includes(e.key)){if(!/INPUT|SELECT|TEXTAREA/.test(tag)){e.preventDefault();show(current-1)}}
+    if(e.key.toLowerCase()==='a'&&!/INPUT|SELECT|TEXTAREA/.test(tag))toggleAppendix();
+    if(e.key.toLowerCase()==='s'&&!/INPUT|SELECT|TEXTAREA/.test(tag))toggleStepMenu();
+  });
+  document.getElementById('deck').addEventListener('touchstart',e=>{if(stepMenu.classList.contains('open'))return;touchX=e.changedTouches[0].clientX},{passive:true});
   document.getElementById('deck').addEventListener('touchend',e=>{if(touchX===null)return;const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>70)show(current+(dx<0?1:-1));touchX=null},{passive:true});
   show(0);
 
