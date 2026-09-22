@@ -12,7 +12,7 @@
 <body>
 
 <div id="deck">
-<div class="hint">← → navigate · A appendix</div>
+<div class="hint">← → navigate · S steps · A toolkit</div>
 
 <section class="slide active" data-title="From Idea to Interactive Learning">
   <div class="content hero">
@@ -44,9 +44,19 @@
   </div>
 </section>
 
+<section class="slide phase-transition" data-title="STEP 01 — SPARK" data-step="1" data-step-name="SPARK">
+  <div class="content transition-content">
+    <div class="transition-count">STEP 01 <span>/ 08</span></div>
+    <div class="phase">SPARK</div>
+    <div class="phase-sub">Discover the learning opportunity</div>
+    <p class="lead transition-desc">Experience the difference between presenting content and designing an interaction.</p>
+    <div class="transition-route"><span>01 · SPARK</span><span class="arrow">→</span><span>Predict before reveal</span></div>
+  </div>
+</section>
+
 <section class="slide" data-title="SPARK — Predict before reveal">
   <div class="content">
-    <div class="eyebrow">SPARK · Discover</div>
+    <div class="eyebrow">STEP 01 · SPARK · Discover</div>
     <h2>Predict before we reveal.</h2>
     <p class="lead">CH₄, NH₃ and H₂O share a tetrahedral electron-domain arrangement. Do they have the same <strong>molecular shape</strong>?</p>
     <div class="molecule-grid" id="predictionGrid">
@@ -70,7 +80,7 @@
 <section class="slide" data-title="The content did not change">
   <div class="content grid2">
     <div>
-      <div class="eyebrow">SPARK · Debrief</div>
+      <div class="eyebrow">STEP 01 · SPARK · Debrief</div>
       <div class="big-quote">“The content did not change. <span class="accent">The learning experience did.</span>”</div>
       <p style="margin-top:24px">Static content can explain. Interactive content can ask learners to <strong>predict, manipulate, check and reflect</strong>.</p>
     </div>
@@ -84,7 +94,7 @@
 
 <section class="slide" data-title="Chat vs Canvas">
   <div class="content">
-    <div class="eyebrow">SPARK · Meet the workspace</div>
+    <div class="eyebrow">STEP 01 · SPARK · Meet the workspace</div>
     <h2>Chat answers. Canvas helps you <span class="accent">build.</span></h2>
     <div class="compare">
       <div class="card"><div class="kicker"><span class="dot"></span>GEMINI CHAT</div><h3>Ask → Answer</h3><p>Useful for explanations, brainstorming, rewriting and quick support.</p><div class="process-line"><b>Question</b><span>→</span><b>Response</b></div></div>
@@ -94,12 +104,22 @@
   </div>
 </section>
 
+<section class="slide phase-transition" data-title="STEP 02 — GROUND" data-step="2" data-step-name="GROUND">
+  <div class="content transition-content">
+    <div class="transition-count">STEP 02 <span>/ 08</span></div>
+    <div class="phase">GROUND</div>
+    <div class="phase-sub">Design from reliable content</div>
+    <p class="lead transition-desc">Start with a shared source in NotebookLM before asking Canvas to build.</p>
+    <div class="transition-route"><span>02 · GROUND</span><span class="arrow">→</span><span>NotebookLM → Canvas</span></div>
+  </div>
+</section>
+
 <section class="slide" data-title="GROUND — reliable teaching content">
   <div class="content grid2">
     <div>
-      <div class="phase">GROUND</div><div class="phase-sub">Design from reliable content</div>
-      <p class="lead" style="margin-top:18px">Before we build, decide what the app should teach — and what source material it should trust.</p>
-      <div class="section-band"><span class="on">SPARK</span><span class="on">GROUND</span><span>BUILD</span><span>REFINE</span><span>TRANSFORM</span><span>CREATE</span><span>SHARE</span></div>
+      <div class="eyebrow">STEP 02 · GROUND · Design from reliable content</div>
+      <h2>Start with a source you can trust.</h2>
+      <p class="lead">Before we build, decide what the app should teach — and what source material it should trust.</p>
     </div>
     <div class="card soft">
       <div class="kicker">HANDS-ON · START HERE</div>
@@ -119,9 +139,19 @@
   </div>
 </section>
 
+<section class="slide phase-transition" data-title="STEP 03 — BUILD" data-step="3" data-step-name="BUILD">
+  <div class="content transition-content">
+    <div class="transition-count">STEP 03 <span>/ 08</span></div>
+    <div class="phase">BUILD</div>
+    <div class="phase-sub">Develop the first prototype</div>
+    <p class="lead transition-desc">Turn the grounded teaching idea into a simple working Canvas prototype.</p>
+    <div class="transition-route"><span>03 · BUILD</span><span class="arrow">→</span><span>Prompt → Preview</span></div>
+  </div>
+</section>
+
 <section class="slide" data-title="BUILD — prompt to prototype">
   <div class="content">
-    <div class="eyebrow">BUILD · Develop the first prototype</div>
+    <div class="eyebrow">STEP 03 · BUILD · Develop the first prototype</div>
     <h2>Start simple. Make it work.</h2>
     <div class="grid2" style="margin-top:22px">
       <div class="prompt-box" id="promptBox">
@@ -141,9 +171,19 @@
   </div>
 </section>
 
+<section class="slide phase-transition" data-title="STEP 04 — REFINE" data-step="4" data-step-name="REFINE">
+  <div class="content transition-content">
+    <div class="transition-count">STEP 04 <span>/ 08</span></div>
+    <div class="phase">REFINE</div>
+    <div class="phase-sub">Validate and improve</div>
+    <p class="lead transition-desc">Improve one behaviour at a time, then test the prototype like a learner.</p>
+    <div class="transition-route"><span>04 · REFINE</span><span class="arrow">→</span><span>Test → Fix → Verify</span></div>
+  </div>
+</section>
+
 <section class="slide" data-title="REFINE — small follow-ups beat one giant prompt">
   <div class="content">
-    <div class="eyebrow">REFINE · Validate and improve</div>
+    <div class="eyebrow">STEP 04 · REFINE · Validate and improve</div>
     <h2>Small follow-ups beat one giant prompt.</h2>
     <div class="iteration">
       <div class="iter"><span class="num">VERSION 01</span><strong>Make it work</strong><p>Prediction, check and feedback.</p></div>
@@ -211,9 +251,20 @@
   </div>
 </section>
 
+<section class="slide phase-transition" data-title="STEP 05 — TRANSFORM" data-step="5" data-step-name="TRANSFORM">
+  <div class="content transition-content">
+    <div class="transition-count">STEP 05 <span>/ 08</span></div>
+    <div class="phase">TRANSFORM</div>
+    <div class="phase-sub">Transfer the design pattern</div>
+    <p class="lead transition-desc">Reuse the learning design for a different cognitive task: from spatial VSEPR reasoning to calculation scaffolding.</p>
+    <div class="transition-route"><span>05 · TRANSFORM</span><span class="arrow">→</span><span>VSEPR → Stoichiometry</span></div>
+  </div>
+</section>
+
 <section class="slide" data-title="TRANSFORM — same pedagogy, new cognitive task">
   <div class="content">
-    <div class="phase">TRANSFORM</div><div class="phase-sub">Transfer the design pattern</div>
+    <div class="eyebrow">STEP 05 · TRANSFORM · Transfer the design pattern</div>
+    <h2>Same pedagogy. New cognitive task.</h2>
     <div class="grid2" style="margin-top:28px">
       <div class="card soft"><div class="kicker">VISUAL CONCEPT</div><h3>VSEPR</h3><p>Predict → manipulate → compare → explain</p></div>
       <div class="card cyan"><div class="kicker">QUANTITATIVE REASONING</div><h3>Stoichiometry</h3><p>Identify → convert → ratio → calculate → check</p></div>
@@ -224,7 +275,7 @@
 
 <section class="slide" data-title="TRANSFORM — build the calculation tutor">
   <div class="content">
-    <div class="eyebrow">TRANSFORM · HANDS-ON · BUILD WITH ME</div>
+    <div class="eyebrow">STEP 05 · TRANSFORM · HANDS-ON · BUILD WITH ME</div>
     <h2>Calculation Tutor · Version 1</h2>
     <p class="lead">Keep your VSEPR prototype for comparison. Open a <strong>new Gemini Canvas</strong> and build the calculation scaffold first — not the polished app.</p>
 
@@ -269,7 +320,7 @@ Require a learner response before moving to the next stage. Give brief formative
 
 <section class="slide" data-title="TRANSFORM — refine the calculation tutor">
   <div class="content">
-    <div class="eyebrow">TRANSFORM · HANDS-ON · REFINE WITH ME</div>
+    <div class="eyebrow">STEP 05 · TRANSFORM · HANDS-ON · REFINE WITH ME</div>
     <h2>Now improve it <span class="accent">one prompt at a time.</span></h2>
     <p class="lead">Do not replace the whole build. Send these as follow-up instructions to the same Canvas.</p>
 
@@ -337,9 +388,19 @@ Require a learner response before moving to the next stage. Give brief formative
   </div>
 </section>
 
+<section class="slide phase-transition" data-title="STEP 06 — CREATE" data-step="6" data-step-name="CREATE">
+  <div class="content transition-content">
+    <div class="transition-count">STEP 06 <span>/ 08</span></div>
+    <div class="phase">CREATE</div>
+    <div class="phase-sub">Implement in your own discipline</div>
+    <p class="lead transition-desc">Bring your own teaching problem and sources into the same grounded design workflow.</p>
+    <div class="transition-route"><span>06 · CREATE</span><span class="arrow">→</span><span>Your material → Your prototype</span></div>
+  </div>
+</section>
+
 <section class="slide" data-title="CREATE — prompt generator wizard">
   <div class="content">
-    <div class="eyebrow">CREATE · Your own teaching material</div>
+    <div class="eyebrow">STEP 06 · CREATE · Your own teaching material</div>
     <h2>Prompt Generator Wizard</h2>
     <p class="lead">Tell us what you want to teach. The wizard prepares a source-grounded prompt to paste into <strong>NotebookLM</strong>, which will turn your own sources into a Canvas-ready build brief.</p>
 
@@ -490,8 +551,9 @@ Require a learner response before moving to the next stage. Give brief formative
 <section class="slide" data-title="CREATE — build your own discipline prototype">
   <div class="content grid2">
     <div>
-      <div class="phase">CREATE</div><div class="phase-sub">Implement in your own discipline</div>
-      <p class="lead" style="margin-top:18px">Now make it yours. Start from one real teaching difficulty, not from a desire to “use AI”.</p>
+      <div class="eyebrow">STEP 06 · CREATE · Implement in your own discipline</div>
+      <h2>Now make it yours.</h2>
+      <p class="lead">Start from one real teaching difficulty, not from a desire to “use AI”.</p>
     </div>
     <div class="card">
       <h3>35-minute individual build</h3>
@@ -504,7 +566,7 @@ Require a learner response before moving to the next stage. Give brief formative
 
 <section class="slide" data-title="Peer test — swap, test, refine">
   <div class="content">
-    <div class="eyebrow">CREATE · Peer validation</div>
+    <div class="eyebrow">STEP 06 · CREATE · Peer validation</div>
     <h2>Swap devices. Test like a student.</h2>
     <div class="grid3" style="margin-top:26px">
       <div class="card"><h3>Academic</h3><p>Is it <strong>accurate</strong>? Can you find one factual or reasoning issue?</p></div>
@@ -515,9 +577,19 @@ Require a learner response before moving to the next stage. Give brief formative
   </div>
 </section>
 
+<section class="slide phase-transition" data-title="STEP 07 — DELIVER" data-step="7" data-step-name="DELIVER">
+  <div class="content transition-content">
+    <div class="transition-count">STEP 07 <span>/ 08</span></div>
+    <div class="phase">DELIVER</div>
+    <div class="phase-sub">Get it into students’ hands</div>
+    <p class="lead transition-desc">Test the student view, create a share link and place it where your students already learn.</p>
+    <div class="transition-route"><span>07 · DELIVER</span><span class="arrow">→</span><span>Prototype → Classroom</span></div>
+  </div>
+</section>
+
 <section class="slide" data-title="DELIVER — get it into students' hands">
   <div class="content">
-    <div class="eyebrow">DELIVER · From prototype to classroom</div>
+    <div class="eyebrow">STEP 07 · DELIVER · From prototype to classroom</div>
     <h2>You built it. Now how do students <span class="accent">use it?</span></h2>
     <p class="lead">For the core workshop, use the simplest delivery route: create a Canvas share link, test it as a student, then place that same link where your students already learn.</p>
 
@@ -578,9 +650,19 @@ Require a learner response before moving to the next stage. Give brief formative
   </div>
 </section>
 
+<section class="slide phase-transition" data-title="STEP 08 — SHARE" data-step="8" data-step-name="SHARE">
+  <div class="content transition-content">
+    <div class="transition-count">STEP 08 <span>/ 08</span></div>
+    <div class="phase">SHARE</div>
+    <div class="phase-sub">Demonstrate, critique and teach forward</div>
+    <p class="lead transition-desc">Show one working interaction, explain its teaching value and help someone else reuse the pattern.</p>
+    <div class="transition-route"><span>08 · SHARE</span><span class="arrow">→</span><span>Learner → Trainer</span></div>
+  </div>
+</section>
+
 <section class="slide" data-title="Learner mode → Trainer mode">
   <div class="content">
-    <div class="eyebrow">SHARE · Teach forward</div>
+    <div class="eyebrow">STEP 08 · SHARE · Teach forward</div>
     <h2>Switch hats.</h2>
     <div class="mode-switch">
       <div class="mode"><div class="kicker">LEARNER MODE</div><h3>I can build it.</h3><p>I understand the workflow because I experienced it.</p></div>
@@ -593,7 +675,7 @@ Require a learner response before moving to the next stage. Give brief formative
 
 <section class="slide" data-title="Innovation showcase">
   <div class="content">
-    <div class="eyebrow">SHARE · 90-second innovation showcase</div>
+    <div class="eyebrow">STEP 08 · SHARE · 90-second innovation showcase</div>
     <h2>Show me. Don't just tell me.</h2>
     <div class="grid3" style="margin-top:26px">
       <div class="card soft"><div class="kicker">01 · PROBLEM</div><h3>What do students struggle with?</h3><p>One sentence. Keep the teaching problem visible.</p></div>
@@ -702,10 +784,19 @@ Require a learner response before moving to the next stage. Give brief formative
   <p>Use the same workspace for lesson-plan drafting, rubric refinement, structured notes and other teaching documents — but keep this workshop centred on interactive learning design.</p>
 </div>
 
+<div id="stepMenu" class="step-menu" aria-hidden="true">
+  <div class="step-menu-head">
+    <div><div class="kicker">WORKSHOP JOURNEY</div><h3>Jump to a step</h3></div>
+    <button class="secondary" id="closeStepMenu">Close</button>
+  </div>
+  <div class="step-menu-grid" id="stepMenuGrid"></div>
+  <p class="step-menu-note">Use this to revisit a section without clicking through every slide. Your current step is highlighted.</p>
+</div>
+
 <div class="bar" id="bar"></div>
 <nav id="nav" aria-label="Presentation navigation">
-  <div class="nav-left"><span class="brand">Gemini Canvas for Educators</span><span>·</span><span class="slide-title" id="navTitle"></span></div>
-  <div class="nav-right"><button class="navbtn" id="appendixBtn" title="Trainer toolkit">A</button><button class="navbtn" id="prev" aria-label="Previous slide">←</button><span class="counter" id="counter"></span><button class="navbtn" id="next" aria-label="Next slide">→</button></div>
+  <div class="nav-left"><span class="brand">Gemini Canvas for Educators</span><span class="nav-step" id="navStep">INTRO</span><span class="slide-title" id="navTitle"></span></div>
+  <div class="nav-right"><button class="navbtn navbtn-wide" id="stepsBtn" title="Jump to workshop step">☰ Steps</button><button class="navbtn" id="appendixBtn" title="Trainer toolkit">A</button><button class="navbtn" id="prev" aria-label="Previous slide">←</button><span class="counter" id="counter"></span><button class="navbtn" id="next" aria-label="Next slide">→</button></div>
 </nav>
 </div>
 
