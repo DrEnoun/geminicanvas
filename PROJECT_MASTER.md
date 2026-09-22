@@ -244,6 +244,24 @@ Locked transfer workflow:
 
 The wizard should be general enough for multiple disciplines and should not require participants to understand prompt engineering.
 
+## DELIVER — Get the prototype into students' hands
+
+The workshop must answer the practical question: **after I build this, how do my students use it?**
+
+The core classroom delivery route is:
+
+**Finished Gemini Canvas → Share & export → Share → review app information → copy public link → test the link as a student → place the link in the lecturer's normal delivery channel.**
+
+Normal delivery channels can include Google Classroom, an institutional LMS, email, a class messaging group, or a QR code generated with an approved tool.
+
+Shared Canvas content opens on `gemini.google.com` in a web browser. Participants should test the student experience on another device/account before class.
+
+Trainer pre-work must include testing the Share option with the actual institutional Workspace account because administrator settings can restrict sharing. If sharing is restricted, use the institution's approved delivery route rather than bypassing controls.
+
+For multi-user Canvas apps, do not use the activity to collect sensitive or identifiable student data. Shared app data may be visible or editable to people who have the public link.
+
+The deck includes a small **student delivery helper** where a participant can paste the Canvas share link and activity title to generate a ready-to-copy student instruction for their LMS/Classroom/email/class group.
+
 ## Peer review and showcase
 
 Quick review criteria:
