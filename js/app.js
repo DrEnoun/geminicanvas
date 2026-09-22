@@ -91,10 +91,12 @@
     const topic=fieldValue('wizTopic');
     const level=resolvedValue('wizLevel','wizLevelOther');
     const outcome=fieldValue('wizOutcome');
+    const challenge=fieldValue('wizChallenge');
     const time=fieldValue('wizTime');
     const interaction=resolvedValue('wizInteraction','wizInteractionOther');
     const feedback=fieldValue('wizFeedback');
     const language=fieldValue('wizLanguage');
+    const size=fieldValue('wizSize');
     const source=fieldValue('wizSource');
     const extra=fieldValue('wizExtra');
 
@@ -113,10 +115,12 @@
       '- Learners: '+level,
       '- Learning outcome: '+outcome
     ];
+    if(challenge)lines.push('- Current teaching challenge: '+challenge);
     if(time)lines.push('- Time available: '+time);
     if(interaction)lines.push('- Preferred learner interaction: '+interaction);
     if(feedback)lines.push('- Feedback style: '+feedback);
     if(language)lines.push('- Output language: '+language);
+    if(size)lines.push('- Approximate size: '+size);
     if(source)lines.push('- Prioritise this source if available: '+source);
     if(extra)lines.push('- Additional requirements: '+extra);
 
