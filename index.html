@@ -106,6 +106,10 @@
       <p>Use a shared VSEPR source pack. Extract:</p>
       <div class="flow"><span class="step">1 learning outcome</span><span class="step">3 essential concepts</span><span class="step">2 misconceptions</span><span class="step">1 formative check</span></div>
       <p style="margin-top:20px"><strong>NotebookLM supports the grounding.</strong> Canvas remains the hero.</p>
+      <div class="resource-actions">
+        <button type="button" class="primary" id="openVseprPack">Open VSEPR input pack</button>
+        <a class="secondary resource-link" href="assets/vsepr-participant-input-pack.md" download>Download .md</a>
+      </div>
     </div>
   </div>
 </section>
@@ -324,10 +328,81 @@
   </div>
 </section>
 
+<div id="vseprPack" class="resource-drawer" aria-hidden="true">
+  <button class="secondary appendix-close" id="closeVseprPack">Close</button>
+  <div class="eyebrow">Participant Hands-on Resource</div>
+  <h2 style="font-size:36px">VSEPR Shared Input Pack</h2>
+  <p>Use this common source during <strong>GROUND → BUILD</strong>. Copy it into your preferred grounding workflow, or download the Markdown file and upload it as a source.</p>
+  <div class="resource-actions">
+    <button type="button" class="primary" id="copyVseprPack">Copy full pack</button>
+    <a class="secondary resource-link" href="assets/vsepr-participant-input-pack.md" download>Download .md</a>
+  </div>
+  <div class="pack-status" id="packStatus" aria-live="polite"></div>
+
+  <h3>Learning outcome</h3>
+  <p>Predict and explain the molecular geometry of CH₄, NH₃ and H₂O from the number of bonding domains and lone-pair domains around the central atom.</p>
+
+  <h3>Core VSEPR ideas</h3>
+  <div class="mini-prompt">• Electron domains repel and arrange to reduce repulsion.
+• A bond or a lone pair counts as one electron domain.
+• Single, double and triple bonds each count as one electron domain for VSEPR geometry.
+• Electron-domain geometry includes bonding domains and lone pairs.
+• Molecular geometry describes the arrangement of atoms only.
+• Four electron domains give tetrahedral electron-domain geometry.
+• Lone pairs repel more strongly than bonding pairs and can compress bond angles.
+• Introductory repulsion order: lone pair–lone pair &gt; lone pair–bonding pair &gt; bonding pair–bonding pair.</div>
+
+  <h3>Shared molecule set</h3>
+  <div class="pack-table-wrap">
+    <table class="pack-table">
+      <thead><tr><th>Molecule</th><th>Bonding</th><th>Lone pairs</th><th>Electron-domain geometry</th><th>Molecular geometry</th><th>Angle</th><th>AXE</th></tr></thead>
+      <tbody>
+        <tr><td>CH₄</td><td>4</td><td>0</td><td>Tetrahedral</td><td>Tetrahedral</td><td>109.5°</td><td>AX₄</td></tr>
+        <tr><td>NH₃</td><td>3</td><td>1</td><td>Tetrahedral</td><td>Trigonal pyramidal</td><td>~107°</td><td>AX₃E</td></tr>
+        <tr><td>H₂O</td><td>2</td><td>2</td><td>Tetrahedral</td><td>Bent</td><td>~104.5°</td><td>AX₂E₂</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Design against these misconceptions</h3>
+  <p><strong>1.</strong> “Four electron domains means every molecule is tetrahedral.” Four domains give tetrahedral <em>electron-domain geometry</em>; molecular geometry depends on bonds versus lone pairs.</p>
+  <p><strong>2.</strong> “Lone pairs do not affect shape.” Lone pairs occupy space and repel other electron domains, influencing geometry and bond angles.</p>
+
+  <h3>Starting prompt for Canvas</h3>
+  <div class="mini-prompt">Act as an educator designing a first-year chemistry microlearning activity.
+
+Using the supplied VSEPR source pack, create an interactive learning experience for CH₄, NH₃ and H₂O.
+
+Use the flow: LEARN → PREDICT → EXPLORE → CHECK → FEEDBACK.
+
+Do not reveal the molecular shape until the learner commits to an answer.
+
+Distinguish electron-domain geometry from molecular geometry and give concise feedback explaining how lone pairs influence molecular geometry and bond angle.
+
+Keep the interface student-friendly and suitable for a short formative learning activity.</div>
+
+  <h3>Verify before accepting the build</h3>
+  <p>CH₄: tetrahedral, AX₄, 109.5° · NH₃: trigonal pyramidal, AX₃E, ~107° · H₂O: bent, AX₂E₂, ~104.5°. All three have tetrahedral electron-domain geometry.</p>
+
+  <h3>Reference</h3>
+  <p>OpenStax Chemistry 2e, Section 7.6, <em>Molecular Structure and Polarity</em>. The downloadable pack contains the reference URL.</p>
+
+  <details class="pack-details">
+    <summary>How participants use this in the hands-on session</summary>
+    <p><strong>1.</strong> Open or download this shared pack. <strong>2.</strong> Ground the activity from the pack. <strong>3.</strong> Use the starting prompt in Canvas. <strong>4.</strong> Preview the prototype. <strong>5.</strong> Refine one feature at a time. <strong>6.</strong> Verify the chemistry before sharing.</p>
+  </details>
+</div>
+
 <div id="appendix" aria-hidden="true">
   <button class="secondary appendix-close" id="closeAppendix">Close</button>
   <div class="eyebrow">Trainer Toolkit Appendix</div>
   <h2 style="font-size:36px">Run it again.</h2>
+  <h3>Participant shared input pack</h3>
+  <p>Open the same VSEPR source pack used during the hands-on session.</p>
+  <div class="resource-actions">
+    <button type="button" class="primary" id="openVseprPackFromToolkit">Open VSEPR input pack</button>
+    <a class="secondary resource-link" href="assets/vsepr-participant-input-pack.md" download>Download .md</a>
+  </div>
   <h3>Core VSEPR build prompt</h3>
   <div class="mini-prompt">Act as an educator designing a first-year chemistry microlearning activity. Create an interactive VSEPR learning experience for CH4, NH3 and H2O. Use the flow LEARN → PREDICT → EXPLORE → CHECK → FEEDBACK. Do not reveal the molecular shape until the learner commits to an answer. Give concise feedback explaining how lone pairs affect molecular geometry.</div>
   <h3>Refinement prompts</h3>
